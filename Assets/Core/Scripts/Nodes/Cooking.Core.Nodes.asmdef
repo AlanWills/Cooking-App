@@ -1,0 +1,21 @@
+{
+    "name": "Cooking.Core.Nodes",
+    "rootNamespace": "Cooking.Core.Nodes",
+    "references": [
+        "Celeste.FSM.Nodes",
+        "Celeste.Events",
+        "Cooking.Core",
+        "Celeste.FSM",
+        "Celeste.Parameters",
+        "XNode"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Cooking.Instructions.Editor",
+    "rootNamespace": "CookingEditor.Instructions",
+    "references": [
+        "Cooking.Instructions",
+        "Celeste.Scene.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

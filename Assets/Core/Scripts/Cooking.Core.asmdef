@@ -1,0 +1,20 @@
+{
+    "name": "Cooking.Core",
+    "rootNamespace": "Cooking.Core",
+    "references": [
+        "Celeste.Objects",
+        "Celeste.Persistence",
+        "Celeste.DataStructures",
+        "Celeste.Events",
+        "Celeste.Parameters"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa64967de1ae2a74da74897402cd839a, type: 3}
+  m_Name: MainMenuAddressables_BundledGroupSchema
+  m_EditorClassIdentifier: 
+  m_Group: {fileID: 11400000, guid: b017d9eba3f28fc44a2b3d0ca829522d, type: 2}
+  bundleInStreamingAssets: 1
