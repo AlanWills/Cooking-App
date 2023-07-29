@@ -20,7 +20,7 @@ MonoBehaviour:
   playerOverrideVersion: 
   addressablesBuildDirectory: 
   addressablesLoadDirectory: 
-  addressablesS3UploadBucket: 
+  addressablesUploadURL: 
   buildTarget: 13
   buildTargetGroup: 7
   development: 1

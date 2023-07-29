@@ -22,12 +22,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - MainMenuAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c0a6d0a6a96326e43ae78ab912a6acb7
     m_Address: Assets/Instructions/Scenes/InstructionsSceneSet.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+    m_SerializedLabels:
+    - MainMenuAddressables
+  - m_GUID: 3cd6b5700cafd3d458739c25a0346605
+    m_Address: Assets/MainMenu/Scenes/MainMenu.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainMenuAddressables
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

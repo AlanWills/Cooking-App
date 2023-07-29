@@ -15,31 +15,31 @@ MonoBehaviour:
   version: {fileID: 11400000, guid: d6d6af4ddfd39ed4eb264e259eff6c0c, type: 2}
   buildDirectory: Builds/Android
   gDriveBuildUploadDirectory: 
-  outputName: Build-{version}.apk
-  addressablesEnabled: 0
-  playerOverrideVersion: 
-  addressablesBuildDirectory: 
-  addressablesLoadDirectory: 
-  addressablesS3UploadBucket: 
+  outputName: CookingApp-{version}-Debug.apk
+  addressablesEnabled: 1
+  playerOverrideVersion: res
+  addressablesBuildDirectory: ServerData/Android/Debug/{major}.{minor}
+  addressablesLoadDirectory: https://storage.googleapis.com/celeste-games/cooking-app/ServerData/Android/Debug/{major}.{minor}
+  addressablesUploadURL: celeste-games/cooking-app
   buildTarget: 13
   buildTargetGroup: 7
   development: 1
-  isDebugBuild: 0
+  isDebugBuild: 1
   waitForManagedDebugger: 0
-  buildOptions: 2097665
-  scriptingDefineSymbols: {fileID: 0}
-  addressableGroupsInBuild: {fileID: 0}
-  buildPreparationSteps: {fileID: 0}
-  buildPostProcessSteps: {fileID: 0}
-  buildAssetsPreparationSteps: {fileID: 0}
-  buildAssetsPostProcessSteps: {fileID: 0}
-  updateAssetsPreparationSteps: {fileID: 0}
-  updateAssetsPostProcessSteps: {fileID: 0}
+  buildOptions: 2097153
+  scriptingDefineSymbols: {fileID: 11400000, guid: 24be61b378eeea54591142faa8d2366c, type: 2}
+  addressableGroupsInBuild: {fileID: 11400000, guid: 2d11fc5c672a0474c92d685e0a596ad3, type: 2}
+  buildPreparationSteps: {fileID: 11400000, guid: 03af7c9224825454097a06ed711cae78, type: 2}
+  buildPostProcessSteps: {fileID: 11400000, guid: a4015072a4a0f644ca4596a8e44b53a0, type: 2}
+  buildAssetsPreparationSteps: {fileID: 11400000, guid: 27bd0aa30672cb2418e1447d53704e34, type: 2}
+  buildAssetsPostProcessSteps: {fileID: 11400000, guid: 54517d7b3bc789749bc6030c9e852272, type: 2}
+  updateAssetsPreparationSteps: {fileID: 11400000, guid: 19f118304fbcfc94b90c3338a08be76f, type: 2}
+  updateAssetsPostProcessSteps: {fileID: 11400000, guid: e89db0ef55329624dac373b7e4544a48, type: 2}
   scriptingBackend: 1
   architecture: 1
   buildAppBundle: 0
   buildSymbols: 0
   minifyRelease: 0
-  keystorePassword: 
-  keyAliasName: 
-  keyAliasPassword: 
+  keystorePassword: ebong382684
+  keyAliasName: cooking-app-publishing
+  keyAliasPassword: cookingapp111929

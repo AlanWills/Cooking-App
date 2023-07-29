@@ -22,126 +22,926 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c6013af47fd1a674e899eb3094527bb2
     m_Address: Assets/EngineSystems/Scenes/EngineSystemsSceneSet.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e734f67eafee23c42b700fe3ffea11ae
     m_Address: Assets/Bootstrap/Steps/LoadEngineSystemSceneSet.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ea98e486fe2a8ec48bf5f422cb597eeb
-    m_Address: Assets/Bootstrap/Scenes/BootstrapSceneSet.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cb1ae6fee88009f45b47da8eb4ab3c3d
     m_Address: Loading
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 960bd64c1ac0dc24ca2f4ce7991faa29
     m_Address: Bootstrap
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 821464f83d068bc4398f2cf58a76c626
     m_Address: Assets/Bootstrap/Steps/BootstrapLoadJob.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55f8fa66c4a44d248a9114cfe05c1a21
     m_Address: Assets/Celeste/Sound/Data/Parameters/MusicEnabled.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2d29920b3d6cd3042ba61ee81ce76db6
     m_Address: Assets/Celeste/Sound/Data/Events/MusicEnabledChanged.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8fa3ec8d517dd664e87b65d78b0cebbf
     m_Address: Assets/Celeste/Sound/Data/Parameters/ShuffleMusic.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2eabb83eedd9f1f40ad53dc01363b3d7
     m_Address: Assets/Celeste/Sound/Data/Events/PlayMusic.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19f3c0a08f26f3d458a39303193882d8
     m_Address: Assets/Celeste/Sound/Data/Events/PlayMusicOneShot.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3eed6292d3a31404d902c0f0c8f58f95
     m_Address: Assets/Celeste/Sound/Data/Parameters/SFXEnabled.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cb8842c1d047ec7499fb7294f61d3a52
     m_Address: Assets/Celeste/Sound/Data/Events/SFXEnabledChanged.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ef966062692627148a3dd8fe640184f2
     m_Address: Assets/Celeste/Sound/Data/Events/PlaySFX.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 48cb7be28c92f1944aed44df0a6c29c2
     m_Address: Assets/Celeste/Sound/Data/Events/PlaySFXOneShot.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a934324b8ef677429c28450da60882f
     m_Address: Assets/Bootstrap/Steps/LoadEngineSystemsSceneSet.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 639632a64b6efa241a31194f92a530d8
     m_Address: GameSystems
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+    m_SerializedLabels:
+    - CommonAddressables
   - m_GUID: a94b6d18d7a5ed549a44a6cda8d1f2f3
     m_Address: GameSystemsDebug
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b660742fcb595ef4580a05b05d1fa45a
-    m_Address: Instructions
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 4df08a0036df31b42bcc5386f44213ae
+    m_Address: Assets/Celeste/Input/Data/Events/DisableInput.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 4267ee0495522b748b2932da05a16789
+    m_Address: Assets/Celeste/Loading/Events/LoadContext.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 8d3765d541679ce41a0c39e1f1aa9e14
+    m_Address: Assets/Celeste/Loading/Data/UI/CanvasLayers/LoadingCanvasLayer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: e1ad3c596fdd9ab459e8ccb8682786ef
+    m_Address: Assets/Celeste/Loading/Events/ExecuteLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 9cd7c5afb04e8b74ca6375f2de930860
+    m_Address: Assets/Celeste/Input/Data/Events/EnableInput.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 80d21d9030dfeee4ab10e4c4d0c06dc2
+    m_Address: Assets/Celeste/Input/Data/Events/LeftMouseButtonDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 415ecc714b59d9e4290e17239f154c61
+    m_Address: Assets/GameSystems/Data/ReferenceLayouts/SafeArea.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 5a819ea16b858ac49b37e65c28d077b0
+    m_Address: Assets/Celeste/Input/Data/Events/RightMouseButtonFirstUp.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 8b044a9344308e84ab49dbcf4963122b
+    m_Address: Assets/Celeste/Input/Data/Events/DoubleTouch.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 9b8e39d38991b7c4c87e89ffc758babb
+    m_Address: Assets/GameSystems/Data/ReferenceLayouts/TopUnsafeArea.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 15b9eca4d3a0b3044923f2861faa7254
+    m_Address: Assets/Celeste/Input/Data/Events/RightMouseButtonDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: d4ff3bd4f9398b840af7355049e4a60c
+    m_Address: Assets/GameSystems/Data/ReferenceLayouts/MainMenu/MainMenuContent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 74f2db1510282b341a73c9fd67e77aa9
+    m_Address: Assets/Celeste/Input/Data/Events/GameObjectMiddleClicked.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: b8a0cc75949c38843849273e680425a3
+    m_Address: Assets/Core/Data/RecipeCatalogue.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 13b1cee57fbb72f44a516ef604d57345
+    m_Address: Assets/Celeste/Input/Data/Events/RightMouseButtonFirstDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: a70d2ad7caf24ba4c8d6bd16fd4f8958
+    m_Address: Assets/Celeste/Input/Data/Events/MiddleMouseButtonDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 3e0f99d77fe7e284b98c11650a91e607
+    m_Address: Assets/Celeste/Input/Data/Events/LeftMouseButtonFirstDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 1d0dd8082f5d9f14cae4daf109e914b0
+    m_Address: Assets/Celeste/Input/Data/Events/LeftMouseButtonFirstUp.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: f8e41487b26e73a4a8c520f166a1d589
+    m_Address: Assets/Celeste/Input/Data/Events/MouseScrolled.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 10ba0f09655a5f243b414d2b64c32ed8
+    m_Address: Assets/Celeste/Input/Data/Events/TripleTouch.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 8294e469dc48dcd48bef4ac737260cf9
+    m_Address: Assets/Celeste/Input/Data/InputState.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: ca9f5fa95ffab41fb9a615ab714db018
+    m_Address: Packages/com.unity.inputsystem/InputSystem/Plugins/PlayerInput/DefaultInputActions.inputactions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 14ae487a7b0d7524e8df71e5b3255874
+    m_Address: Assets/Celeste/Input/Data/Parameters/InputCamera.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: fd6e719a571ebee44825331cbb115b5f
+    m_Address: Assets/Snapshots/SnapshotRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: bc1369bb8eb49fb46838fcde447aed29
+    m_Address: Assets/Celeste/Input/Data/Events/GameObjectRightClicked.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 563148fb673d6dc4dafd34d657d1bf33
+    m_Address: Assets/Celeste/Input/Data/Events/MouseMoved.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: a3aa7b1cee5289041a03094b573b5bf5
+    m_Address: Assets/Celeste/Input/Data/Events/MiddleMouseButtonFirstUp.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 7ed9008c9f02d0a468e3b188c757ef49
+    m_Address: Assets/Celeste/Input/Data/Events/MiddleMouseButtonFirstDown.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 6e60b11d2a4389641b69eadaf7d97ecd
+    m_Address: Assets/Celeste/Input/Data/Events/SingleTouch.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 4c35533ee67b9864fb929fad880509bd
+    m_Address: Assets/Core/Data/RecipeRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 3d2bbbcfeec825142a3344fe962761b5
+    m_Address: Assets/Celeste/Input/Data/Events/GameObjectLeftClicked.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 5989e611c35c3154d85f7af3960161b2
+    m_Address: Assets/Core/Data/Recipes/TestRecipe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 18d131f46cfdfc042b3309fedecc35a4
+    m_Address: Assets/Celeste/Input/Data/Events/PointerEnteredGameObject.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: ab881b82897d13e4586a10be2790acdb
+    m_Address: Assets/Celeste/Input/Data/Events/PointerExitedGameObject.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: d7f0b2468ae616e4cbfd91be170072ce
+    m_Address: Assets/MainMenu/Events/OnInstructionsContextLoaded.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 5a668d8426e97fd48af14e7bd863d1dc
+    m_Address: Assets/Instructions/Parameters/CurrentRecipeStep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: a66ba5a2e4fa3a74b96c494a3e4df316
+    m_Address: Assets/Instructions/Parameters/CurrentRecipe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 8574c5f17cf3c9c4ca25d89b90bb7567
+    m_Address: Assets/Instructions/Events/PreviousRecipeStep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 5d86ba21492037a4c9510f93f2e46367
+    m_Address: Assets/Instructions/Events/NextRecipeStep.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: e5a423cefe0eb184ea2504bdc5aca383
+    m_Address: Assets/Instructions/Events/CurrentRecipeStepChanged.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 52858245eda6f7e4ab90d7d4d352eaf5
+    m_Address: Assets/Bootstrap/Steps/DownloadMainMenuAddressablesLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 39e3aeaa7bbd8c74c8df838e1ef08cf2
+    m_Address: Assets/Bootstrap/Steps/DownloadCommonAddressablesLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 50039586d3d71834c8dbb6af9cae319c
+    m_Address: Assets/Celeste/Debug/Data/Parameters/IsDebugBuild.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: d88521bd0e0adee4990183113913fb96
+    m_Address: Assets/Celeste/UI/Textures/WhitePixel.png
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a7f283d0dc77ebd4bac60ee62f9ba8b4
-    m_Address: Assets/Instructions/Scenes/InstructionsDebug.unity
+  - m_GUID: 00a0f48641424db4b89fbba2d9a83c8c
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button06.png
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 00b0208c301c3c840af67eaa0c05e94f
+    m_Address: Assets/Celeste/UI/Textures/PNG/dropdownMid.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 00dca927c25e2204e902b29ca7434f0c
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_sliderRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1049466926a77c34e9d7d088c59ea632
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_boxCross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 605a6f417579c524397341c6defe4ff0
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_boxCross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c0c5004d8b68365488246666eb82a803
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_box.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c01a4d8bd43820244879be1bc0fddd09
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_sliderLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0f4cef52aa02ca41a04071dd1a9c799
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_checkmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f02a1c208f0b5ca40ad3c5b03209be46
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0ab407a4a9106846a933fa3cf240d74
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button14.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 219206e23b185334596a92d0708fa80c
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_crossGrey.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 41c87b5dabfd43447aa6ce17f18bb2e7
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 41fb6d5da2a966140b945606c10561c7
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 51cedb602e7d5d043ac22699b35c0cbe
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 915d3ead22a9aff468010eb12bb023a5
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_arrowDownGrey.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c1f45f10c494a824fa7a179566b37e65
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_tickWhite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d1b57cf04fe136346a541f7b7db3f442
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderHorizontal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e129aab670e971d4f8c138659ade03d4
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 42635f6a691209c4488e9a2a6bf43624
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_arrowUpGrey.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4320faffe2210154e804201fe4f59ff6
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderEnd.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43a973416f4a26d4386f71b35323883b
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 434ae765cd1dbc8489e7bee089f748cf
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83154fcbde95a4b498011f0def443c50
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a3a7d2f4958664d4e89479193c59b47a
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_boxCheckmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b374404d069c217439186618abd397f7
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_sliderUp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d351484f7d8179e4a8bbea7daf4a8469
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_arrowUpWhite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e3e383ecbbf99944886b334f7ba5d7dc
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_checkmarkWhite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e3fcffea92a4988488eff7fdbaabc238
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_checkmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 34ef49c80a3322442897533420e86387
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 644c9139b18a061478264f834531e3e3
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_sliderRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 644e678e07fbdf441adcec378ba42d18
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_sliderRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 647e656af3276184099926825b3b0fde
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9463da11cb966f748bc2322961c17707
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 15dc38448cda23840a2ae3c00230e349
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_sliderUp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 35046b23abdabc44cb0e034600bd80e2
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 95ad2b74ae499c8438ef1cb3a22bc818
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_crossWhite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5ca44eb033b726428f697ef791a50fc
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e50b5a1f970ab9b4d8e24d5b7a87622d
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_tickGrey.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 067cd3e9b2ba50c4fa0b0aa44238495d
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 362015c3fd126d84b9cff599e7a511ed
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4621e04ce09765445b82a84d4626e55c
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button15.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 466da62f6a73f9444a9b3365d963e1b2
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c69255a34a0e1a945be2e7d6ecde4b80
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_cross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6845af2e2cb4ad43abe824452ba0dfe
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 07f41fc3f102c1246876dd7ebe61cb74
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button00.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 17409a74682b6314c99e081043890862
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47d3ffe029dc94a45a0d8ee1093580b1
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_boxTick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 67422ef1eacd1e74f8c9d56e5850ec77
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_sliderDown.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 87b2cae218ffa1a4cac4dee64bd1a84f
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_sliderUp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8704a0a2303b3344dba87ca7ac9a9826
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7e1c038a14a38e498961ef84587a6d4
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_tick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7226ae6c59015a49b409feb2ec5aaf2
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7dc2a0414fec2b42bd5708ddfc0cbf9
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c7d3f770e25ae19459a7ca948bf4c244
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f75577fb10736e34bbe6a7da37a1fbcc
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 28909f6e00197e745be8de4c315a6014
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderUp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 581f40cdcc524ef40a221ece6110e856
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_panel.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 78cc599463efcf94ebd56c85e4c9d1a4
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8851ba788b76bf14aa680e179b5e4933
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 88c7a482149026f47871ce7d30013454
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_panel.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f8b02f123fd02034ea7aaf9d16f965b2
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_boxCheckmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 09d261af2c0c866419b8ad49b0c070cd
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_sliderDown.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 19bd853dbc469f448837cccce9dadebe
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 393e5dd76bc5b2e44a40b7f3e0b2cd61
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49d5e9a9cd1aee24d8c6fe7e7d4aa900
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 79bbc674bb04c8245a31ef474c8a9543
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f921574fecfc4054ebf8bc1ff6fe7103
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderVertical.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f9359e0048a010b47a2e1421cd042201
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4aeae2157b4e6a4468415098095ff54e
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6a651bead106a23489aab02ca64e32bb
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7acd5b33d5047e547be5b86e2e532093
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8a62e72a8de09504c990a00d7e689198
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9abe5048c78a7e945a486d187006c483
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_tick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aac4eeeef4415c34e9809f975e86c660
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dac33cad2c91b0b4983ebbda3e07b01a
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da0f107175c4440409042e63ebe738e2
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ea2a05eacf179ed409dd97e60dc634f8
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eabfe9173e8b0234f8964f9822fd11a6
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_boxCheckmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4b97ae46486d7fb4c889fe7a429a214b
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6bf4e2458e49b8f47b1e601f8d397adb
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_panel.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6bcc5722cdb5bae45b74f6a136bdb479
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_cross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7bde499df38b52745982455c51243ac7
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bcd19218157be549b27c0416ba29cd5
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_sliderDown.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b85efe56c0e1044995b718c57334b93
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bb1253883062b1742a4bfe505dc4e521
+    m_Address: Assets/Celeste/UI/Textures/PNG/dropdownTop.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb532732ece850e4eb726eef5eec5dd4
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button00.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ebfc43c11a11c54458529784d65d4283
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c65cfc71d5d52f4abe03037d711f686
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c22bb43d025a94459fec9853b921709
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ccc0cfd78766fe4480db07324604f3f
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4c5ffbb159c4cb0428406a8f114c1721
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_cross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5cc2a57e55caf4546a62c867be5e5e20
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7c4a27f52ea2d994787f4bc5162a0425
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ccecb6c58248ab45998eb6f8846e470
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button00.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9c9c1474e401eab4186160b6914bd5bb
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_arrowDownWhite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9cbc8d311bb7b854e99b1650ce914ebb
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_checkmarkGrey.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec4d85aa84a0342439b636766db5d53c
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_boxCross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc07b644a03e4a2419ae65e20ff7bd92
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3d30d0f8c0ac0334e80ae95c591ab5d5
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button00.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3d77534527c2eed43a9746afcd368791
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5dfc657844db75c4bbe2c3dd67f3f7da
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_boxTick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7db0c5d427c99d04980a4d70a5d9cb2c
+    m_Address: Assets/Celeste/UI/Textures/PNG/dropdownBottom.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd087d521be1fd647a69d41f08d2b04b
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bda921a6f1f72714ca2e782175a9dced
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd3437dbf3213ab408d411636473e94e
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_boxTick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fddadecd98e128c4095b74b7426b1e32
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_sliderLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ea6e6252d2a24b4ca5736370507ed2b
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_button02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ec07f323d227b945ad4ab04923d20e3
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_boxCheckmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9ee5245acdd4c7f429cceac38bced3b4
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_boxCross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cec4d9d548d418647809019fa051c460
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: feac0a5eff0a33e4485794b552075d4e
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ff3c100a12230f4b8ff907b2df227c5
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_sliderDown.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3f21cb41de464e74e91330b6d8332556
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_panel.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3fbab552946cee54686c307c7adad03a
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_button02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f4020ea0e027214892b2daeaf406370
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_tick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ffa7d19086304348973d25b981d5bb0
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_checkmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8fefc269f0ba2084dbc04a0f88b57e07
+    m_Address: Assets/Celeste/UI/Textures/PNG/green_button05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: afdf06d39a4a96b46859f37097bdc657
+    m_Address: Assets/Celeste/UI/Textures/PNG/yellow_boxTick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef4a0a90df55a6f4bbd62af541888124
+    m_Address: Assets/Celeste/UI/Textures/PNG/red_sliderLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ffa897968ad9d4c46a95467ca1db65c1
+    m_Address: Assets/Celeste/UI/Textures/PNG/grey_button02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 80b05b7b5ad131a4598ec326f1617008
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 113d5207b0624fe40a5a3d06694550c2
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 21d2e3a6842575c42be807d8b6a85cb3
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_boxCross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 41e678dd504e105478977d536bd3c6b5
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a19f0907b57f0b348a146811d1673e79
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c1934ca7ab2759248aec550f2b70b615
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_sliderUp.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f26b5999f436335408d2014baebe49d4
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_circle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 93b191518411679408e562bdf59f3468
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b493a98e855ce6f408a27c0cf0045d13
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_sliderRight.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 052464bc791985c4b921076a234d1dab
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_cross.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 25f454ddba5aa154a8f186447c5e7b52
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_boxTick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 75cae1dd1ec7c964cac687870942a5d7
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_sliderLeft.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86babc3607c247d47b0d009105f16820
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 96a0c571461b09b40b134c17837de72c
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 964ecc7de1527a84eafe6f184cba6a16
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_panel.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6fff048819e0a843b00ba1181bbc415
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 572904efd4b89e1488e7d1a3054ae5e3
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_boxCheckmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6760f10a9690df740814665ddaf1658d
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_sliderDown.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a72ff0e326695a84db55cb63dfc78b29
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_checkmark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4c018ee0bbc759b4393f0a1095be064d
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0d17d41168d094346958e72f5338c001
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1de3b3eae99b0a643a0e0be50ceb6666
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d1c51d405ea0ae46a9ab16e32a270b6
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_tick.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ddbcea6f22ca284d8d40f27c6f97ce8
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d6866f5e8bdf4f4ba30cebf12d73d8a
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d0d5103dd106b84e99004b824496c35
+    m_Address: Assets/Celeste/UI/Textures/PNG/Blue/blue_button00.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a18dfd74c8c7f6d4ea9b442559c7a1f3
+    m_Address: Assets/Bootstrap/Steps/DownloadInstructionsAddressablesLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0b2a23a6696cbe4ca81e5866b3dc1e5
+    m_Address: Assets/Celeste/UI/Textures/Atlases/BigButtons.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9dc4d74cdaedd4e4b913c5c590be89b2
+    m_Address: Assets/Celeste/UI/Textures/Atlases/BlueSpriteAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8df0266f639f301478d4489ac1963c50
+    m_Address: Assets/MainMenu/Data/LoadJobs/BeginRecipeLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fbe912d4204f66640931393eddab4386
+    m_Address: Assets/MainMenu/Data/LoadJobs/LoadInstructionsSceneSet_SubLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 58413827ea9222b4180f86f5a5b8e9fb
+    m_Address: Assets/MainMenu/Data/Contexts/InstructionsContextProvider.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2bf79ed92e436614f8036b70ce4b05dc
+    m_Address: Assets/Core/Parameters/SelectedRecipe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: e13382e30e3591843b1aa089d1dbc8b0, type: 2}
     - {fileID: 11400000, guid: 878c3d756332d5c4a80cd317ccc520df, type: 2}
+    - {fileID: 11400000, guid: e13382e30e3591843b1aa089d1dbc8b0, type: 2}
+    - {fileID: 11400000, guid: ef554fbfef15c5745852e54ba9bc67a3, type: 2}

@@ -35,7 +35,7 @@ namespace Cooking.Core.Parameters
         {
             int hashCode = -159790080;
             hashCode = hashCode * -1521134295 + base.GetHashCode();
-            hashCode = hashCode * -1521134295 + Value.GetHashCode();
+            hashCode = Value != null ? hashCode * -1521134295 + Value.GetHashCode() : 0;
             return hashCode;
         }
 

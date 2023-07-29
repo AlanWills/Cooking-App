@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec20c59cf89c3e42b02f36b861c6258, type: 3}
   m_Name: TestRecipe
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - title: Step 1
+    description: Do this, then this, then this
+    image: {fileID: -1139763762674310568, guid: f0b2a23a6696cbe4ca81e5866b3dc1e5, type: 3}
+  - title: Step 2
+    description: This is the second step of the recipe
+    image: {fileID: 7121445765855195257, guid: f0b2a23a6696cbe4ca81e5866b3dc1e5, type: 3}
   displayName: Test Recipe
   thumbnail: {fileID: 21300000, guid: a3a7d2f4958664d4e89479193c59b47a, type: 3}

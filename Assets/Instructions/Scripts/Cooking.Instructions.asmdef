@@ -1,7 +1,13 @@
 {
     "name": "Cooking.Instructions",
     "rootNamespace": "Cooking.Instructions",
-    "references": [],
+    "references": [
+        "Celeste.Scene",
+        "Cooking.Core",
+        "Celeste.Parameters",
+        "Celeste.Events",
+        "Unity.TextMeshPro"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

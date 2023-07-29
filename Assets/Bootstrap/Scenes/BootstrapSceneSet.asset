@@ -20,5 +20,5 @@ MonoBehaviour:
     sceneId: Bootstrap
     isDebugOnly: 0
   unloadResourcesOnLoad: 1
-  isDebugBuild: {fileID: 11400000, guid: 50039586d3d71834c8dbb6af9cae319c, type: 2}
+  isDebugBuild: {fileID: 0}
   checkForMissingComponents: 1

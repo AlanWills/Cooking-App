@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: InstructionsAddressables
+  m_EditorClassIdentifier: 
+  m_GroupName: InstructionsAddressables
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d5431a2588c01d74ca5ddcdbeec60cb0
+  m_SerializeEntries:
+  - m_GUID: b660742fcb595ef4580a05b05d1fa45a
+    m_Address: Instructions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
+  - m_GUID: a7f283d0dc77ebd4bac60ee62f9ba8b4
+    m_Address: InstructionsDebug
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fa8473135cd1bf04ead38fd24f84dcf8, type: 2}
+    - {fileID: 11400000, guid: aa352cd4abd71dc4faf4a51802fa4867, type: 2}
+    - {fileID: 11400000, guid: 40adb77e228a8354f99caa325f690f2c, type: 2}

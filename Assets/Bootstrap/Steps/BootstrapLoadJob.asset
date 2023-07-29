@@ -15,4 +15,6 @@ MonoBehaviour:
   loadJobs:
   - {fileID: 11400000, guid: 4a934324b8ef677429c28450da60882f, type: 2}
   - {fileID: 11400000, guid: 39e3aeaa7bbd8c74c8df838e1ef08cf2, type: 2}
+  - {fileID: 11400000, guid: 52858245eda6f7e4ab90d7d4d352eaf5, type: 2}
+  - {fileID: 11400000, guid: a18dfd74c8c7f6d4ea9b442559c7a1f3, type: 2}
   - {fileID: 11400000, guid: e734f67eafee23c42b700fe3ffea11ae, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AndroidAppVersion
   m_EditorClassIdentifier: 
   major: 0
-  minor: 0
-  build: 1
+  minor: 1
+  build: 0

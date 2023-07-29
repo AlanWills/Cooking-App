@@ -8,8 +8,12 @@ namespace Cooking.Core.Objects
     {
         #region Properties and Fields
 
+        public string Title => title;
+        public string Description => description;
+        public Sprite Image => image;
+
         [SerializeField] private string title;
-        [SerializeField] private string description;
+        [SerializeField, TextArea] private string description;
         [SerializeField] private Sprite image;
 
         #endregion

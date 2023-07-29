@@ -10,6 +10,7 @@ namespace Cooking.Core.Runtime
 
         public string DisplayName => recipe.DisplayName;
         public Sprite Thumbnail => recipe.Thumbnail;
+        public int NumSteps => recipe.NumItems;
 
         [NonSerialized] private Recipe recipe;
 
@@ -18,6 +19,11 @@ namespace Cooking.Core.Runtime
         public RecipeRuntime(Recipe recipe)
         {
             this.recipe = recipe;
+        }
+
+        public RecipeStep GetStep(int index)
+        {
+            return recipe.GetItem(index);
         }
     }
 }

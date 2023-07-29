@@ -6,7 +6,10 @@
         "Celeste.Persistence",
         "Celeste.DataStructures",
         "Celeste.Events",
-        "Celeste.Parameters"
+        "Celeste.Parameters",
+        "Celeste.Tools",
+        "RecyclableScrollRect",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

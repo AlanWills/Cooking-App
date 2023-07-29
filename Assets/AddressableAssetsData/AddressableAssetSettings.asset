@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: 5eae8953a1a20a041a31d45bef84bff1
-  m_currentHash:
+  m_CachedHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -29,24 +29,22 @@ MonoBehaviour:
   m_ContiguousBundles: 1
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
-  m_ShaderBundleNaming: 0
-  m_ShaderBundleCustomNaming: 
+  m_ShaderBundleNaming: 2
+  m_ShaderBundleCustomNaming: alwaysbundle
   m_MonoScriptBundleNaming: 0
-  m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: a7c6fd40566dbe3409c3fa49fbeb3b23
   m_RemoteCatalogLoadPath:
     m_Id: 8d5021c7f8a9ae445b591a0785cfd511
-  m_ContentStateBuildPathProfileVariableName: <default settings path>
-  m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
-  m_BuildAddressablesWithPlayerBuild: 0
-  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_BuildAddressablesWithPlayerBuild: 2
+  m_overridePlayerVersion: res
   m_GroupAssets:
   - {fileID: 11400000, guid: e2964b75418404c498eb64ed1909b4e3, type: 2}
   - {fileID: 11400000, guid: a9baadacc0b5a7e4fb4fc723e48bebd7, type: 2}
   - {fileID: 11400000, guid: b017d9eba3f28fc44a2b3d0ca829522d, type: 2}
+  - {fileID: 11400000, guid: fe4e66d177da8594bb621fa6cd149c78, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -65,9 +63,9 @@ MonoBehaviour:
       - m_Id: e5d3bc8ca2cd7ac4da3e0a2d37a95fff
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: a7c6fd40566dbe3409c3fa49fbeb3b23
-        m_Value: ServerData/[BuildTarget]
+        m_Value: ServerData/Android/Debug/0.1
       - m_Id: 8d5021c7f8a9ae445b591a0785cfd511
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://storage.googleapis.com/celeste-games/cooking-app/ServerData/Android/Debug/0.1
     m_ProfileEntryNames:
     - m_Id: 5607dbfc90096d348a0bf56111a3dd9c
       m_Name: BuildTarget
@@ -87,10 +85,13 @@ MonoBehaviour:
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
-    - default
+    - CommonAddressables
+    - MainMenuAddressables
+    - InstructionsAddressables
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: a4dcb51712c956844bcd8fa6d015dbc9, type: 2}
+  - {fileID: 11400000, guid: d1f23599a74af464094b28817da68afc, type: 2}
   m_InitializationObjects: []
   m_CertificateHandlerType:
     m_AssemblyName: 
@@ -107,4 +108,3 @@ MonoBehaviour:
     m_Settings: {fileID: 11400000}
     m_NextInstanceId: 0
     m_RegisteredServiceTypeRefs: []
-    m_PingTimeoutInMilliseconds: 5000
