@@ -5,6 +5,7 @@
         "Cooking.Core",
         "Celeste.Persistence",
         "Celeste.Objects",
+        "Celeste.DataStructures",
         "Celeste.DataStructures.Editor",
         "Celeste.Persistence.Editor"
     ],

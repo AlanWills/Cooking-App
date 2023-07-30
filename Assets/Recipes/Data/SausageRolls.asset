@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec20c59cf89c3e42b02f36b861c6258, type: 3}
+  m_Name: SausageRolls
+  m_EditorClassIdentifier: 
+  guid: ce5197f0-c6ae-49af-b2a5-e63f9c6bffc0
+  displayName: Sausage Rolls
+  thumbnail: {fileID: 21300000, guid: a3a7d2f4958664d4e89479193c59b47a, type: 3}
+  steps:
+  - title: Prepare Pastry
+    description: Remove your pastry from the fridge.
+    tip: 
+    warning: 
+    recommendation: If you can do this 15 minutes before starting the rest of the
+      recipe.
+    explanation: 
+    images: []
+  - title: Preheat Oven
+    description: Preheat the oven to 180C if you have a fan, or 200C if not.
+    tip: 
+    warning: 
+    recommendation: 
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: bec8dc6e12c92fb44bc82a31492b641e, type: 3}
+    - {fileID: 21300000, guid: 6c553a5b161f61341b61779828f5a924, type: 3}
+  - title: Prepare Filling
+    description: 'If using sausage meat, put it into a medium bowl and massage with
+      your handes so it''s no longer a block.
+
+
+      If using sausages, open the
+      pack(s) and ensure you have a sharp knife to hand.'
+    tip: 
+    warning: 
+    recommendation: 
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: b2e3e16aa1c1997409d1b0e6411a2dec, type: 3}
+  - title: Prepare Filling
+    description: 'Skip this step if using sausage meat.
+
+
+      Using the sharp knife,
+      cut about halfway into the sausage along its full length.  <b>Gently</b> peel
+      the casing off the sausage, starting at the cut.'
+    tip: It can help to slightly pull the sausage apart along the cut to find a hold
+      on the casing.
+    warning: 
+    recommendation: Being gentle whilst peeling the casing off means it's more likely
+      to all come off in one go.
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: 3579dd6353507b1448129371c7ea0fd6, type: 3}
+  - title: Prepare for Rolling Pastry
+    description: 'Lightly dust a large area of work surface with flour, making sure
+      sure you have some more flour nearby in case.
+
+
+      If using pastry that
+      needs rolling, dust the rolling pin with flour too.'
+    tip: If you don't have a rolling pin, you can use a wine bottle instead.
+    warning: 
+    recommendation: Pour a small pile of flour on the work surface before rolling. 
+      When you need more flour, it is easier to take from there than a bag or a jar,
+      especially if you have dirty hands.
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: 07393f71e50f19d40a87c1289f18287c, type: 3}
+  - title: Rolling Pastry
+    description: 'If using pre-rolled pastry, slowly roll it out onto the floured
+      surface.  Dust the top side with flour, then flip it and make sure that side
+      is dusted too (some flour should already be on there).
+
+
+      If using pastry
+      that needs rolling, begin gently rolling the pastry block into a rectangle
+      about twice as long as it is wide.  Stop when it is about 5mm thick.
+
+
+'
+    tip: Occasionally flip the pastry to its other side so that it rolls out evenly.
+    warning: Take your time and focus on rolling out any large clumps of pastry,
+      especially at the edges.
+    recommendation: It's better for the pastry to be too thick than too thin, so
+      if you're not sure be cautious.  The more you do this, the better you will
+      be at understanding how thick the pastry should be.
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: b8aac258ddac5874c9af052b637bf6e5, type: 3}
+  - title: Arrange Filling
+    description: 'Cut the pastry along its length so that it is divided into two
+      long strips.  Split the filling into two roughly equal parts and arrange in
+      a long and thin cylinder on the pastry.
+
+
+      Finally, add chutney or a viscous
+      sauce along the whole length of the filling.'
+    tip: It can be useful to put the filling slightly over to one side, so that you
+      have more pastry on the other side to fold over.
+    warning: It's better to have the chutney on the side of the filling that will
+      be folded over.  The other side will be used to close the pastry and it could
+      get messy.
+    recommendation: Don't worry if the filling is not perfectly distributed.  As
+      long as it forms a rough cylinder along the whole length of the pastry, things
+      will be fine!
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: fd1bb1b9dceb3874882140e67176c9cb, type: 3}
+    - {fileID: 21300000, guid: 56a220acb9880b14bbc3b8c3fc57edf8, type: 3}
+  - title: Fold Pastry
+    description: Fold the pastry over the meat and use a fork to press the two edges
+      of the pastry together.
+    tip: 
+    warning: If the filling is in the wrong position, you may not have enough pastry
+      to fold over.  If this is the case, you will need to move the filling slightly.
+    recommendation: 
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: bec8dc6e12c92fb44bc82a31492b641e, type: 3}
+    - {fileID: 21300000, guid: 6c553a5b161f61341b61779828f5a924, type: 3}
+  - title: Prepare for Cooking
+    description: Add baking paper to a baking tray.  Cut the pastry along its length
+      using a sharp knife and arrange on the baking tray.
+    tip: Leave a bit of space between the rolls as they can expand when cooked.
+    warning: When cutting, do not press down as the filling can come out of the pastry. 
+      Instead, let the sharp knife do the work and just gently cut back and forth.
+    recommendation: You can cut these as big or as small as you like, although it's
+      best not to make them thin.
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: 15a3da5488a28294e86b2b03f3a0ce4a, type: 3}
+  - title: Add Eggwash
+    description: Crack the egg into a small bowl, whisk it with a fork and apply
+      it to each portion using a pastry brush.
+    tip: If you don't have a pastry brush, you can use a fork to add the egg to the
+      pastry and your fingers to brush it around.
+    warning: 
+    recommendation: If you don't have a pastry brush, get one, they're incredibly
+      useful.
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: 15a3da5488a28294e86b2b03f3a0ce4a, type: 3}
+  - title: Bake!
+    description: 'Add the tray to the oven and bake for 30 minutes.  If the pastry
+      has puffed and browned, remove and arrange on a cooling rack.
+
+
+      If you
+      think they need a little longer, put them back in the oven for 5 minutes.'
+    tip: Timings will vary from oven to oven, how many sausage rolls you've made
+      and their size - that's OK, just change the recipe for next time!
+    warning: 
+    recommendation: 
+    explanation: 
+    images:
+    - {fileID: 21300000, guid: 15a3da5488a28294e86b2b03f3a0ce4a, type: 3}

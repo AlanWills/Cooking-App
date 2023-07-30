@@ -27,6 +27,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - InstructionsAddressables
+  - m_GUID: d7605b2eddf38ec43afec424dc42dc3a
+    m_Address: Assets/Instructions/FSMs/InstructionsFSM.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
+  - m_GUID: 2a4e446de2852de4282e44851cbaa15d
+    m_Address: Assets/Instructions/Events/CloseRecipe.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
+  - m_GUID: 82206e03bed16f54ebf6cc5389da9928
+    m_Address: Assets/Instructions/Prefabs/InstructionsTopBar.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

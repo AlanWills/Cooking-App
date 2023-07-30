@@ -58,6 +58,7 @@
     <type fullname="Celeste.FSM.FSMRuntime" preserve="all" />
   </assembly>
   <assembly fullname="Celeste.FSM.Nodes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.FSM.Nodes.Events.Conditions.VoidEventCondition" preserve="all" />
     <type fullname="Celeste.FSM.Nodes.Events.MultiEventListenerNode" preserve="all" />
   </assembly>
   <assembly fullname="Celeste.Input, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">

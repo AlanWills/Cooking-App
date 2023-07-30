@@ -31,7 +31,7 @@ namespace Cooking.Instructions.UI
             RecipeStep step = currentRecipe.Value.GetStep(currentStepIndex);
             stepTitle.text = step.Title;
             stepDescription.text = step.Description;
-            stepImage.sprite = step.Image;
+            stepImage.sprite = step.HasImages ? step.Images[0] : null;
             previousStepButton.interactable = currentStepIndex > 0;
             previousStepButtonText.color = currentStepIndex > 0 ? Color.white : Color.black;
             nextStepButton.interactable = currentStepIndex < currentRecipe.Value.NumSteps - 1;

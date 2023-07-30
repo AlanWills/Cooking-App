@@ -1,5 +1,7 @@
-﻿using Cooking.Core.Objects;
+﻿using Celeste.DataStructures;
+using Cooking.Core.Objects;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Cooking.Core.Runtime
@@ -8,22 +10,26 @@ namespace Cooking.Core.Runtime
     {
         #region Properties and Fields
 
-        public string DisplayName => recipe.DisplayName;
-        public Sprite Thumbnail => recipe.Thumbnail;
-        public int NumSteps => recipe.NumItems;
+        public string DisplayName => displayName;
+        public Sprite Thumbnail => thumbnail;
+        public int NumSteps => steps.Count;
 
-        [NonSerialized] private Recipe recipe;
+        [NonSerialized] private string displayName;
+        [NonSerialized] private Sprite thumbnail;
+        [NonSerialized] private List<RecipeStep> steps = new List<RecipeStep>();
 
         #endregion
 
         public RecipeRuntime(Recipe recipe)
         {
-            this.recipe = recipe;
+            displayName = recipe.DisplayName;
+            thumbnail = recipe.Thumbnail;
+            steps.AddRange(recipe.Steps);
         }
 
         public RecipeStep GetStep(int index)
         {
-            return recipe.GetItem(index);
+            return steps.Get(index);
         }
     }
 }

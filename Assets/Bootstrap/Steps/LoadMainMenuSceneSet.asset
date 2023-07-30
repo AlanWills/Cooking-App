@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: LoadMainMenuSceneSet
   m_EditorClassIdentifier: 
   sceneSet: {fileID: 11400000, guid: 3cd6b5700cafd3d458739c25a0346605, type: 2}
-  loadSceneMode: 1
+  loadSceneMode: 0
   unloadUnusedAssets: 1
+  onContextLoadedEvent: {fileID: 0}
+  contextProvider: {fileID: 0}
