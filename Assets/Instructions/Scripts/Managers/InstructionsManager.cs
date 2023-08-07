@@ -11,8 +11,12 @@ namespace Cooking.Instructions.Managers
     {
         #region Properties and Fields
 
+        [Header("Data")]
         [SerializeField] private RecipeRuntimeValue currentRecipe;
         [SerializeField] private IntValue currentRecipeStep;
+
+        [Header("Events")]
+        [SerializeField] private Celeste.Events.Event finishRecipeEvent;
 
         #endregion
 
@@ -27,9 +31,16 @@ namespace Cooking.Instructions.Managers
 
         public void OnNextStep()
         {
-            ++currentRecipeStep.Value;
+            if (currentRecipeStep.Value < currentRecipe.Value.NumSteps - 1)
+            {
+                ++currentRecipeStep.Value;
+            }
+            else
+            {
+                finishRecipeEvent.Invoke();
+            }
         }
-
+        
         public void OnPreviousStep()
         {
             --currentRecipeStep.Value;

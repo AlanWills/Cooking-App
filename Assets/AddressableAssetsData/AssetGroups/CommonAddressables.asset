@@ -1092,6 +1092,105 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - CommonAddressables
+  - m_GUID: eaaf5c6ed9981f74db234bab0d7d507d
+    m_Address: Assets/Celeste/Twine/Events/ShowEditTwineNodePopup.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 77073999cf2a6024bb021e3a7445a259
+    m_Address: Assets/Celeste/Twine/Events/SaveTwineStory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 0aeb1ddf3c8c5ee48b82aed37cf32c24
+    m_Address: Assets/Celeste/Twine/Events/SaveTwineRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 6954fb9e61ce1b84e857d6152daba350
+    m_Address: Assets/Celeste/Twine/Events/AddTwineNode.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 0dd7bc7a09ee81943abca3ebb14bf4c4
+    m_Address: Assets/Celeste/Twine/Events/CreateTwineStory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 482084dedd71bcf489628ba59de3baa8
+    m_Address: Assets/Celeste/Twine/Events/FollowTwineNodeLink.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: d584483da97d3184c9befbf8485ab661
+    m_Address: Assets/Celeste/Twine/Events/OnLoadTwineStoryFromRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 7bb69761bdee7fc4b8ec57cb42751604
+    m_Address: Assets/Celeste/Twine/Events/OnTwineNodeAddedToStory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 3422a09a4ad058f4c99bcfcb445c84ae
+    m_Address: Assets/Celeste/Twine/Events/OnTwineNodeRemovedFromStory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: b4369a5c7727e2c428a02362e111d88e
+    m_Address: Assets/Celeste/Twine/Events/RemoveTwineNode.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: bace2d58191513641a507ae3bfec2639
+    m_Address: Assets/Celeste/Twine/Events/SaveCurrentTwineStory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 827532d740637634bb22ffa26ab89a21
+    m_Address: Twine
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: ea3aff85a1f9b9343a4d5240b3105e68
+    m_Address: TwineDebug
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: 3df8fd759293ad04c8ab7ba12dc705d9
+    m_Address: Assets/Twine/Scenes/TwineSceneSet.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: b647837cc403cff43839cf8b3f0c59c8
+    m_Address: Assets/GameSystems/Data/Debug/SceneSetDebugMenu.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CommonAddressables
+  - m_GUID: d1da5ab696b63754eb8658234be24ff3
+    m_Address: Assets/Twine/Data/TwineRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b6c70a0b7a818843abd4a56082868df
+    m_Address: Assets/Celeste/Twine/Prefabs/UI/FollowLinkUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d1bc231cce3b374ebfdfcfec8a6794c
+    m_Address: Assets/Twine/Events/OnTwineContextLoadedEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8cd29d5ec90b5b4ab81a6ed8ff27682
+    m_Address: Assets/Twine/Data/UI/TwineNodeUIControllerSettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 96829beb543e61440bc4fc0eef472618
+    m_Address: Assets/Twine/Data/UI/FollowLinkUISettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86a5c64ba0714ba4a9f6bbabe5b0ebf6
+    m_Address: Assets/Twine/Debug/TwinePersistenceDebugMenu.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

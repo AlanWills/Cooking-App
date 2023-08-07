@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f6e8cf424dd23b46a51d573e172cfe1, type: 3}
-  m_Name: DownloadInstructionsAddressablesLoadJob
+  m_Name: DownloadInstructionsAddressables_SubLoadJob
   m_EditorClassIdentifier: 
   addressablesLabel: InstructionsAddressables

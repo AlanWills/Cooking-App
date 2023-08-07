@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6e8cf424dd23b46a51d573e172cfe1, type: 3}
-  m_Name: DownloadMainMenuAddressablesLoadJob
+  m_Script: {fileID: 11500000, guid: 1e891c68638a6fa41a120017ea349f2d, type: 3}
+  m_Name: TwineNodeUIControllerSettings
   m_EditorClassIdentifier: 
-  addressablesLabel: MainMenuAddressables
+  validColour: {r: 1, g: 1, b: 1, a: 1}
+  invalidColour: {r: 1, g: 0, b: 0, a: 1}
+  showEditTwineNodePopup: {fileID: 11400000, guid: eaaf5c6ed9981f74db234bab0d7d507d, type: 2}

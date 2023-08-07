@@ -11,6 +11,10 @@ namespace Cooking.Core.Objects
 
         public string Title => title;
         public string Description => description;
+        public string Tip => tip;
+        public string Warning => warning;
+        public string Recommendation => recommendation;
+        public string Explanation => explanation;
         public bool HasImages => images.Count > 0;
         public IReadOnlyList<Sprite> Images => images;
 

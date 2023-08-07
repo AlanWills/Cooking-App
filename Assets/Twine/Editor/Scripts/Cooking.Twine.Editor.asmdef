@@ -1,0 +1,19 @@
+{
+    "name": "Cooking.Twine.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:832d49e3e7e4924438f3d1a629c9ce79",
+        "Celeste.Twine"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

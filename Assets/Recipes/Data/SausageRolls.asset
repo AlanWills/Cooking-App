@@ -20,7 +20,7 @@ MonoBehaviour:
     description: Remove your pastry from the fridge.
     tip: 
     warning: 
-    recommendation: If you can do this 15 minutes before starting the rest of the
+    recommendation: If you can, do this 15 minutes before starting the rest of the
       recipe.
     explanation: 
     images: []
@@ -149,7 +149,7 @@ MonoBehaviour:
       useful.
     explanation: 
     images:
-    - {fileID: 21300000, guid: 15a3da5488a28294e86b2b03f3a0ce4a, type: 3}
+    - {fileID: 21300000, guid: e19544916a6b27d488f31ed3cefb935e, type: 3}
   - title: Bake!
     description: 'Add the tray to the oven and bake for 30 minutes.  If the pastry
       has puffed and browned, remove and arrange on a cooling rack.
@@ -163,4 +163,4 @@ MonoBehaviour:
     recommendation: 
     explanation: 
     images:
-    - {fileID: 21300000, guid: 15a3da5488a28294e86b2b03f3a0ce4a, type: 3}
+    - {fileID: 21300000, guid: 73685ac80b86e1c4895e68d0710ef41d, type: 3}

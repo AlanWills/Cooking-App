@@ -25,20 +25,43 @@ namespace Cooking.Core.Managers
 
         protected override RecipeManagerDTO Serialize()
         {
-            return new RecipeManagerDTO();
+            return new RecipeManagerDTO(recipeRecord);
         }
 
         protected override void Deserialize(RecipeManagerDTO dto)
         {
-            // Add recipes from save and then add any remaining recipes from the catalogue
+            foreach (Recipe recipe in recipeCatalogue)
+            {
+                RecipeRuntime recipeRuntime = new RecipeRuntime(recipe);
+                RecipeDTO recipeDTO = dto.recipeDTOs.Find(x => string.CompareOrdinal(x.guid, recipe.Guid) == 0);
+
+                if (recipeDTO != null)
+                {
+                    recipeRuntime.Load(recipeDTO);
+                }
+
+                recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
+                recipeRecord.AddRecipe(recipeRuntime);
+            }
         }
 
         protected override void SetDefaultValues()
         {
             foreach (Recipe recipe in recipeCatalogue)
             {
-                recipeRecord.AddRecipe(new RecipeRuntime(recipe));
+                RecipeRuntime recipeRuntime = new RecipeRuntime(recipe);
+                recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
+                recipeRecord.AddRecipe(recipeRuntime);
             }
+        }
+
+        #endregion
+
+        #region Callbacks
+
+        private void OnRecipeChanged()
+        {
+            Save();
         }
 
         #endregion
