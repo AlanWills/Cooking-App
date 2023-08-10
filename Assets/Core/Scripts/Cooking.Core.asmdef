@@ -8,8 +8,11 @@
         "Celeste.Events",
         "Celeste.Parameters",
         "Celeste.Tools",
+        "Celeste.UI",
         "RecyclableScrollRect",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "FancyCarouselView",
+        "FancyScrollView"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

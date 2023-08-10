@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.harumak.fancycarouselview": {
+      "version": "https://github.com/Haruma-K/FancyCarouselView.git?path=/Assets/FancyCarouselView",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f3ac23c78f1851428f80d1435aad3cf1a9ff6acc"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.10",
       "depth": 1,
@@ -259,6 +266,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.setchi.fancyscrollview": {
+      "version": "https://github.com/setchi/FancyScrollView.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e5d10d3e5961848f93be43c2911344750b509a88"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

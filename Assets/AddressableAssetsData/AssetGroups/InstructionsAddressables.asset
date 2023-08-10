@@ -42,6 +42,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - InstructionsAddressables
+  - m_GUID: 65797b82267e2dc4db4091ea9f73873e
+    m_Address: Assets/Instructions/Events/ShowWebCamCaptureFullScreenPopup.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
+  - m_GUID: c6b38a74d41333e43b8051399ad72384
+    m_Address: Assets/Instructions/Prefabs/WebCamCaptureFullScreenPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

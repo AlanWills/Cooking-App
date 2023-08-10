@@ -1,7 +1,9 @@
 ﻿using Celeste.Events;
 using Cooking.Core.Parameters;
 using Cooking.Core.Runtime;
+using Cooking.Core.UI;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +18,7 @@ namespace Cooking.Instructions.UI
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI stepTitle;
         [SerializeField] private TMP_InputField stepDescription;
-        [SerializeField] private Image stepImage;
+        [SerializeField] private ImageCarouselView stepImages;
         [SerializeField] private TextMeshProUGUI stepUtilityText;
         [SerializeField] private TextMeshProUGUI editButtonText;
         [SerializeField] private Button tipButton;
@@ -46,7 +48,17 @@ namespace Cooking.Instructions.UI
             currentRecipeStep = currentRecipe.Value.GetStep(currentStepIndex);
             stepTitle.text = currentRecipeStep.Title;
             stepDescription.text = currentRecipeStep.Description;
-            stepImage.sprite = currentRecipeStep.HasImages ? currentRecipeStep.Images[0] : null;
+
+            List<ImageCarouselData> stepImagesData = new List<ImageCarouselData>();
+            if (currentRecipeStep.HasImages)
+            {
+                foreach (Sprite image in currentRecipeStep.Images)
+                {
+                    stepImagesData.Add(new ImageCarouselData(image));
+                }
+
+                stepImages.Setup(stepImagesData);
+            }
 
             stepUtilityText.text = "";
             tipButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Tip);

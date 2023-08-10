@@ -149,6 +149,7 @@
   </assembly>
   <assembly fullname="Celeste.UI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Celeste.Events.ShowPopupEvent" preserve="all" />
+    <type fullname="Celeste.Events.ShowPopupEventRaiser" preserve="all" />
     <type fullname="Celeste.UI.CanvasLayer" preserve="all" />
     <type fullname="Celeste.UI.Input.DraggableUI" preserve="all" />
     <type fullname="Celeste.UI.Layout.AdjustRectUsingReferenceLayout" preserve="all" />
@@ -174,8 +175,11 @@
     <type fullname="Cooking.Core.Parameters.RecipeRuntimeReference" preserve="all" />
     <type fullname="Cooking.Core.Parameters.RecipeRuntimeValue" preserve="all" />
     <type fullname="Cooking.Core.Record.RecipeRecord" preserve="all" />
+    <type fullname="Cooking.Core.UI.ImageCarouselCell" preserve="all" />
+    <type fullname="Cooking.Core.UI.ImageCarouselView" preserve="all" />
     <type fullname="Cooking.Core.UI.RecipesUIController" preserve="all" />
     <type fullname="Cooking.Core.UI.RecipeUI" preserve="all" />
+    <type fullname="Cooking.Core.UI.WebCamCaptureFullScreenPopupController" preserve="all" />
     <type fullname="Cooking.Core.Objects.RecipeStep" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Cooking.Core.Nodes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -186,6 +190,11 @@
     <type fullname="Cooking.Instructions.Contexts.InstructionsContextProvider" preserve="all" />
     <type fullname="Cooking.Instructions.Managers.InstructionsManager" preserve="all" />
     <type fullname="Cooking.Instructions.UI.RecipeStepUIController" preserve="all" />
+  </assembly>
+  <assembly fullname="FancyCarouselView, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="FancyCarouselView.Runtime.Scripts.CarouselScroller" preserve="all" />
+    <type fullname="FancyCarouselView.Runtime.Scripts.DotCarouselProgressElement" preserve="all" />
+    <type fullname="FancyCarouselView.Runtime.Scripts.DotCarouselProgressView" preserve="all" />
   </assembly>
   <assembly fullname="RecyclableScrollRect, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="PolyAndCode.UI.RecyclableScrollRect" preserve="all" />
@@ -271,6 +280,7 @@
   </assembly>
   <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
+    <type fullname="UnityEngine.UI.AspectRatioFitter" preserve="all" />
     <type fullname="UnityEngine.UI.Button" preserve="all" />
     <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
     <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
@@ -278,6 +288,7 @@
     <type fullname="UnityEngine.UI.Image" preserve="all" />
     <type fullname="UnityEngine.UI.LayoutElement" preserve="all" />
     <type fullname="UnityEngine.UI.Mask" preserve="all" />
+    <type fullname="UnityEngine.UI.RawImage" preserve="all" />
     <type fullname="UnityEngine.UI.RectMask2D" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.Text" preserve="all" />
@@ -301,6 +312,9 @@
   </assembly>
   <assembly fullname="Celeste.Parameters.AssetReferences">
     <type fullname="Celeste.Parameters.AssetReferences.BoolValueAssetReference" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="FancyScrollView">
+    <type fullname="FancyScrollView.Scroller/Snap" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.TextCoreFontEngineModule">
     <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />

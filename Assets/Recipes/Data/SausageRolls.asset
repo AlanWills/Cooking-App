@@ -30,9 +30,7 @@ MonoBehaviour:
     warning: 
     recommendation: 
     explanation: 
-    images:
-    - {fileID: 21300000, guid: bec8dc6e12c92fb44bc82a31492b641e, type: 3}
-    - {fileID: 21300000, guid: 6c553a5b161f61341b61779828f5a924, type: 3}
+    images: []
   - title: Prepare Filling
     description: 'If using sausage meat, put it into a medium bowl and massage with
       your handes so it''s no longer a block.
