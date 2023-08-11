@@ -55,6 +55,12 @@ namespace Cooking.Core.Runtime
             description = recipeStepDTO.description;
         }
 
+        public void AddImage(Sprite image)
+        {
+            images.Add(image);
+            onRecipeStepChangedEvent?.Invoke();
+        }
+
         public void AddOnRecipeStepChangedCallback(Action onRecipeChanged)
         {
             onRecipeStepChangedEvent += onRecipeChanged;

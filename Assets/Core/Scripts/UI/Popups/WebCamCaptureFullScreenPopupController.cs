@@ -1,5 +1,7 @@
-﻿using Celeste.Events;
+﻿using Celeste.Core;
+using Celeste.Events;
 using Celeste.UI;
+using Cooking.Core.Runtime;
 using System.Collections;
 using System.IO;
 using UnityEngine;
@@ -7,6 +9,16 @@ using UnityEngine.UI;
 
 namespace Cooking.Core.UI
 {
+    public class WebCamCapturePopupArgs : IPopupArgs
+    {
+        public RecipeStepRuntime CurrentStepRuntime;
+
+        public WebCamCapturePopupArgs(RecipeStepRuntime recipeStepRuntime)
+        {
+            CurrentStepRuntime = recipeStepRuntime;
+        }
+    }
+
     [AddComponentMenu("Cooking/Core/UI/Web Cam Capture Popup Controller")]
     public class WebCamCaptureFullScreenPopupController : MonoBehaviour, IPopupController
     {
@@ -16,6 +28,7 @@ namespace Cooking.Core.UI
         [SerializeField] private AspectRatioFitter fitter;
 
         private WebCamTexture webCamTexture;
+        private WebCamCapturePopupArgs popupArgs;
 
         #endregion
 
@@ -23,6 +36,8 @@ namespace Cooking.Core.UI
 
         public void OnShow(IPopupArgs args)
         {
+            popupArgs = args as WebCamCapturePopupArgs;
+
             if (webCamTexture == null)
             {
                 webCamTexture = new WebCamTexture();
@@ -34,6 +49,7 @@ namespace Cooking.Core.UI
         public void OnHide()
         {
             webCamTexture.Stop();
+            popupArgs = null;
         }
 
         public void OnConfirmPressed()
@@ -56,7 +72,10 @@ namespace Cooking.Core.UI
             photo.Apply();
 
             byte[] bytes = photo.EncodeToPNG();
-            File.WriteAllBytes(Path.Combine(Application.persistentDataPath, "photo.png"), bytes);
+            File.WriteAllBytes(Path.Combine(Application.persistentDataPath, $"{GameTime.UtcNowTimestamp}.png"), bytes);
+
+            Sprite sprite = Sprite.Create(photo, new Rect(0, 0, photo.width, photo.height), new Vector2(0.5f, 0.5f), 100);
+            popupArgs.CurrentStepRuntime.AddImage(sprite);
         }
 
         #region Unity Methods

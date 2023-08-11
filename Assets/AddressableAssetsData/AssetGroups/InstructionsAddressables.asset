@@ -52,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - InstructionsAddressables
+  - m_GUID: 60e89ce05e2b40349a61ab7b86dc2fa5
+    m_Address: Assets/Instructions/Events/OnWebCamCaptureFullScreenPopupHidden.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InstructionsAddressables
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

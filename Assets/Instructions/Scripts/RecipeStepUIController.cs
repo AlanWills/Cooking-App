@@ -32,11 +32,14 @@ namespace Cooking.Instructions.UI
         [Header("Data")]
         [SerializeField] private RecipeRuntimeValue currentRecipe;
 
+        [Header("Events")]
+        [SerializeField] private ShowPopupEvent showWebCamCapturePopupEvent;
+
         [NonSerialized] private RecipeStepRuntime currentRecipeStep;
 
         #endregion
 
-        private void RefreshUI(int currentStepIndex)
+        private void SetupUI(int currentStepIndex)
         {
             if (currentStepIndex >= currentRecipe.Value.NumSteps)
             {
@@ -46,9 +49,30 @@ namespace Cooking.Instructions.UI
             }
 
             currentRecipeStep = currentRecipe.Value.GetStep(currentStepIndex);
+
+            previousStepButton.interactable = currentStepIndex > 0;
+            previousStepButtonText.color = currentStepIndex > 0 ? Color.white : Color.black;
+            nextStepButtonText.text = currentStepIndex < currentRecipe.Value.NumSteps - 1 ? "Next" : "Finish";
+
+            RefreshCurrentStepUI();
+        }
+
+        private void RefreshCurrentStepUI()
+        {
             stepTitle.text = currentRecipeStep.Title;
             stepDescription.text = currentRecipeStep.Description;
 
+            RefreshImages();
+
+            stepUtilityText.text = "";
+            tipButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Tip);
+            warningButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Warning);
+            recommendationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Recommendation);
+            explanationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Explanation);
+        }
+
+        private void RefreshImages()
+        {
             List<ImageCarouselData> stepImagesData = new List<ImageCarouselData>();
             if (currentRecipeStep.HasImages)
             {
@@ -59,23 +83,23 @@ namespace Cooking.Instructions.UI
 
                 stepImages.Setup(stepImagesData);
             }
-
-            stepUtilityText.text = "";
-            tipButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Tip);
-            warningButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Warning);
-            recommendationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Recommendation);
-            explanationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Explanation);
-
-            previousStepButton.interactable = currentStepIndex > 0;
-            previousStepButtonText.color = currentStepIndex > 0 ? Color.white : Color.black;
-            nextStepButtonText.text = currentStepIndex < currentRecipe.Value.NumSteps - 1 ? "Next" : "Finish";
         }
 
         #region Callbacks
 
         public void OnCurrentStepChanged(ValueChangedArgs<int> args)
         {
-            RefreshUI(args.newValue);
+            SetupUI(args.newValue);
+        }
+
+        public void OnTakePictureButtonPressed()
+        {
+            showWebCamCapturePopupEvent.Invoke(new WebCamCapturePopupArgs(currentRecipeStep));
+        }
+
+        public void OnWebCamCapturePopupClosed()
+        {
+            RefreshImages();
         }
 
         public void OnEditPressed()

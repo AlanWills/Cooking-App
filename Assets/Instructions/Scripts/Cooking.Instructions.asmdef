@@ -6,6 +6,7 @@
         "Cooking.Core",
         "Celeste.Parameters",
         "Celeste.Events",
+        "Celeste.UI",
         "Unity.TextMeshPro",
         "FancyCarouselView",
         "FancyScrollView"

@@ -9,6 +9,7 @@
         "Celeste.Parameters",
         "Celeste.Tools",
         "Celeste.UI",
+        "Celeste.Core",
         "RecyclableScrollRect",
         "Unity.TextMeshPro",
         "FancyCarouselView",

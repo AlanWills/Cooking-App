@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 4623031292323674417}
   - component: {fileID: 326594518844767322}
   - component: {fileID: 8808661507768915829}
+  - component: {fileID: 8860352929439734020}
   m_Layer: 5
   m_Name: RecipeStepUIController
   m_TagString: Untagged
@@ -443,6 +444,7 @@ MonoBehaviour:
   previousStepButtonText: {fileID: 3113187812244439970}
   nextStepButtonText: {fileID: 2539348989409111556}
   currentRecipe: {fileID: 11400000, guid: a66ba5a2e4fa3a74b96c494a3e4df316, type: 2}
+  showWebCamCapturePopupEvent: {fileID: 11400000, guid: 65797b82267e2dc4db4091ea9f73873e, type: 2}
 --- !u!114 &4623031292323674417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +514,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referenceLayout: {fileID: 11400000, guid: 0f7b8fb64ee8b3d44a1f916430589283, type: 2}
   rectTransform: {fileID: 3707248294810746200}
+--- !u!114 &8860352929439734020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707248294810746201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c2c167d8138f94b8f96ff1b82578d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 60e89ce05e2b40349a61ab7b86dc2fa5, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1347003045549743840}
+        m_TargetAssemblyTypeName: Cooking.Instructions.UI.RecipeStepUIController,
+          Cooking.Instructions
+        m_MethodName: OnWebCamCapturePopupClosed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4108539475444828062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,18 +2647,18 @@ PrefabInstance:
     - target: {fileID: 6191592729197578153, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3093975874091570404}
+      objectReference: {fileID: 1347003045549743840}
     - target: {fileID: 6191592729197578153, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191592729197578153, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RaiseNoArgs
+      value: OnTakePictureButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 6191592729197578153, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Celeste.Events.ShowPopupEventRaiser, Celeste.UI
+      value: Cooking.Instructions.UI.RecipeStepUIController, Cooking.Instructions
       objectReference: {fileID: 0}
     - target: {fileID: 6191592729197578153, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2635,28 +2666,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6191592729197578155, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
       propertyPath: m_Name
-      value: TakeImageButton
+      value: TakePictureButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
---- !u!1 &3606853795372732781 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6191592729197578155, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
-  m_PrefabInstance: {fileID: 7485803515844007622}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3093975874091570404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606853795372732781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e4456e6851bc746949c541e869dbb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 65797b82267e2dc4db4091ea9f73873e, type: 2}
 --- !u!224 &3606853795372732782 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6191592729197578152, guid: a7f4aba8559154c43af28e7c80252349, type: 3}
