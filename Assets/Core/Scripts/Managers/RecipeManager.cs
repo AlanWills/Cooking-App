@@ -5,6 +5,7 @@ using Cooking.Core.Catalogue;
 using Cooking.Core.Record;
 using Cooking.Core.Runtime;
 using Cooking.Core.Objects;
+using System.Collections.Generic;
 
 namespace Cooking.Core.Managers
 {
@@ -42,6 +43,17 @@ namespace Cooking.Core.Managers
 
                 recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
                 recipeRecord.AddRecipe(recipeRuntime);
+            }
+
+            foreach (RecipeDTO recipeDTO in dto.recipeDTOs)
+            {
+                if (recipeRecord.FindRecipe(x => x.Guid == recipeDTO.guid) == null)
+                {
+                    RecipeRuntime recipeRuntime = new RecipeRuntime(recipeDTO.guid, recipeDTO.displayName);
+                    recipeRuntime.Load(recipeDTO);
+                    recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
+                    recipeRecord.AddRecipe(recipeRuntime);
+                }
             }
         }
 

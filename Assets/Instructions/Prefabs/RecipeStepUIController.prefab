@@ -444,6 +444,7 @@ MonoBehaviour:
   previousStepButtonText: {fileID: 3113187812244439970}
   nextStepButtonText: {fileID: 2539348989409111556}
   currentRecipe: {fileID: 11400000, guid: a66ba5a2e4fa3a74b96c494a3e4df316, type: 2}
+  imageRecord: {fileID: 11400000, guid: c6e740ca29d830c4583e88627d2d2222, type: 2}
   showWebCamCapturePopupEvent: {fileID: 11400000, guid: 65797b82267e2dc4db4091ea9f73873e, type: 2}
 --- !u!114 &4623031292323674417
 MonoBehaviour:

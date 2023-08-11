@@ -1,4 +1,5 @@
-﻿using Cooking.Core.Objects;
+﻿using Cooking.Core.Commands;
+using Cooking.Core.Objects;
 using Cooking.Core.Persistence;
 using System;
 using System.Collections.Generic;
@@ -10,55 +11,93 @@ namespace Cooking.Core.Runtime
     {
         #region Properties and Fields
 
-        public string Title { get; set; }
+        public string Title { get; }
 
         public string Description
         {
             get => description;
             set
             {
-                if (string.CompareOrdinal(value, description) != 0)
+                if (string.CompareOrdinal(description, value) != 0)
                 {
                     description = value;
-                    onRecipeStepChangedEvent?.Invoke();
+                    AddEdit(new RecipeStepEditDescriptionCommand(value));
                 }
             }
         }
 
-        public string Tip { get; set; }
-        public string Warning { get; set; }
-        public string Recommendation { get; set; }
-        public string Explanation { get; set; }
+        public string Tip { get; private set; }
+        public string Warning { get; private set; }
+        public string Recommendation { get; private set; }
+        public string Explanation { get; }
         public bool HasImages => images.Count > 0;
-        public IReadOnlyList<Sprite> Images => images;
+        public IReadOnlyList<ImageRuntime> Images => images;
+        public IReadOnlyList<RecipeStepEditCommand> Edits => edits;
 
         private string description;
-        private List<Sprite> images = new List<Sprite>();
+        private List<ImageRuntime> images = new List<ImageRuntime>();
+        private List<RecipeStepEditCommand> edits = new List<RecipeStepEditCommand>();
         private Action onRecipeStepChangedEvent;
 
         #endregion
 
+        public RecipeStepRuntime() { }
+
         public RecipeStepRuntime(RecipeStep recipeStep)
         {
             Title = recipeStep.Title;
-            Description= recipeStep.Description;
+            description= recipeStep.Description;
             Tip = recipeStep.Tip;
             Warning = recipeStep.Warning;
             Recommendation = recipeStep.Recommendation;
             Explanation = recipeStep.Explanation;
 
-            images.AddRange(recipeStep.Images);
+            foreach (Sprite image in recipeStep.Images)
+            {
+                images.Add(new ImageRuntime(image));
+            }
         }
 
         public void Load(RecipeStepDTO recipeStepDTO)
         {
-            description = recipeStepDTO.description;
+            foreach (RecipeStepEditCommandDTO editCommandDTO in recipeStepDTO.edits)
+            {
+                LoadEdit(editCommandDTO);
+            }
+        }
+
+        private void LoadEdit(RecipeStepEditCommandDTO editCommandDTO)
+        {
+            switch ((RecipeStepEditCommandType)editCommandDTO.type)
+            {
+                case RecipeStepEditCommandType.EditDescription:
+                    RecipeStepEditDescriptionCommand editDescription = RecipeStepEditCommandFactory.Create<RecipeStepEditDescriptionCommand>(editCommandDTO.data);
+                    description = editDescription.Description;
+                    edits.Add(editDescription);
+                    break;
+
+                case RecipeStepEditCommandType.AddImage:
+                    RecipeStepAddImageCommand addImage = RecipeStepEditCommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
+                    images.Add(new ImageRuntime(addImage.ImageId));
+                    edits.Add(addImage);
+                    break;
+
+                default:
+                    UnityEngine.Debug.LogAssertion($"Could not find suitable edit command for type: {editCommandDTO.type}.");
+                    break;
+            }
+        }
+
+        private void AddEdit(RecipeStepEditCommand editCommand)
+        {
+            edits.Add(editCommand);
+            onRecipeStepChangedEvent?.Invoke();
         }
 
         public void AddImage(Sprite image)
         {
-            images.Add(image);
-            onRecipeStepChangedEvent?.Invoke();
+            images.Add(new ImageRuntime(image));
+            AddEdit(new RecipeStepAddImageCommand(image.name));
         }
 
         public void AddOnRecipeStepChangedCallback(Action onRecipeChanged)

@@ -10,6 +10,7 @@
         "Celeste.Tools",
         "Celeste.UI",
         "Celeste.Core",
+        "Celeste.OdinSerializer",
         "RecyclableScrollRect",
         "Unity.TextMeshPro",
         "FancyCarouselView",

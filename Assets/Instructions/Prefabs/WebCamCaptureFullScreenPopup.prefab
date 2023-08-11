@@ -278,6 +278,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7800482267484854055, guid: 4e1780fd5ee6b3f40ace8d37fb68399a, type: 3}
   m_PrefabInstance: {fileID: 2892849427940667389}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7521672818208982112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4631722048699673501, guid: 4e1780fd5ee6b3f40ace8d37fb68399a, type: 3}
+  m_PrefabInstance: {fileID: 2892849427940667389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521672818208982115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c16249abe615f4f8abba41a5423531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7521672818208982115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4631722048699673502, guid: 4e1780fd5ee6b3f40ace8d37fb68399a, type: 3}
@@ -295,5 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9a301ab9e618c478075043984248c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 7521672818208982112}
   webCameraOutput: {fileID: 4523035969218221877}
   fitter: {fileID: 8468376346144443837}
+  imageRecord: {fileID: 11400000, guid: c6e740ca29d830c4583e88627d2d2222, type: 2}

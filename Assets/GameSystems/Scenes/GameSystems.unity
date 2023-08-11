@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359669422}
   - component: {fileID: 359669423}
+  - component: {fileID: 359669424}
   m_Layer: 0
   m_Name: RecipeManager
   m_TagString: Untagged
@@ -204,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &359669423
 MonoBehaviour:
@@ -223,6 +224,35 @@ MonoBehaviour:
   loadOnStart: 0
   recipeCatalogue: {fileID: 11400000, guid: b8a0cc75949c38843849273e680425a3, type: 2}
   recipeRecord: {fileID: 11400000, guid: 4c35533ee67b9864fb929fad880509bd, type: 2}
+--- !u!114 &359669424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359669421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c2c167d8138f94b8f96ff1b82578d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 924111d4363e0264da61b8b95cf2dd2b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 359669423}
+        m_TargetAssemblyTypeName: Celeste.Persistence.PersistentSceneManager`2[[Cooking.Core.Managers.RecipeManager,
+          Cooking.Core
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &361739585
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +686,7 @@ RectTransform:
   - {fileID: 131496909}
   - {fileID: 1117978395}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -952,3 +982,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f172a9ec82a1b3b4181f623edd2371cb, type: 3}
+--- !u!1 &2103302006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103302007}
+  - component: {fileID: 2103302008}
+  - component: {fileID: 2103302009}
+  m_Layer: 0
+  m_Name: ImageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2103302007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103302006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103302008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103302006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00579b770ff9c2848be3f5a8191590c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapshotRecord: {fileID: 11400000, guid: fd6e719a571ebee44825331cbb115b5f, type: 2}
+  loadOnAwake: 1
+  loadOnStart: 0
+  imageRecord: {fileID: 11400000, guid: c6e740ca29d830c4583e88627d2d2222, type: 2}
+--- !u!114 &2103302009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103302006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c2c167d8138f94b8f96ff1b82578d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a06e1daecf733d247b49166d3c17aa68, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2103302008}
+        m_TargetAssemblyTypeName: Celeste.Persistence.PersistentSceneManager`2[[Cooking.Core.Managers.ImageManager,
+          Cooking.Core
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

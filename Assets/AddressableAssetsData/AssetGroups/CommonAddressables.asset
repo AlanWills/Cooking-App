@@ -1191,6 +1191,18 @@ MonoBehaviour:
     m_Address: Assets/Twine/Debug/TwinePersistenceDebugMenu.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a06e1daecf733d247b49166d3c17aa68
+    m_Address: Assets/Core/Events/SaveImageRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c6e740ca29d830c4583e88627d2d2222
+    m_Address: Assets/Core/Data/ImageRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 924111d4363e0264da61b8b95cf2dd2b
+    m_Address: Assets/Core/Events/SaveRecipeRecord.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

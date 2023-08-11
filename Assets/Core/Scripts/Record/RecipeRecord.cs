@@ -1,8 +1,10 @@
 using Celeste.DataStructures;
+using Cooking.Core.Events;
 using Cooking.Core.Runtime;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Cooking.Core.Record
 {
@@ -13,6 +15,9 @@ namespace Cooking.Core.Record
 
         public int NumRecipes => recipes.Count;
 
+        [SerializeField] private Celeste.Events.Event saveRecipeRecordEvent;
+        [SerializeField] private GuaranteedRecipeRuntimeEvent onRecipeAddedEvent;
+
         [NonSerialized] private List<RecipeRuntime> recipes = new List<RecipeRuntime>();
 
         #endregion
@@ -20,6 +25,8 @@ namespace Cooking.Core.Record
         public void AddRecipe(RecipeRuntime recipe)
         {
             recipes.Add(recipe);
+            onRecipeAddedEvent.Invoke(recipe);
+            saveRecipeRecordEvent.Invoke();
         }
 
         public RecipeRuntime FindRecipe(Predicate<RecipeRuntime> predicate)
@@ -30,6 +37,16 @@ namespace Cooking.Core.Record
         public RecipeRuntime GetRecipe(int index)
         {
             return recipes.Get(index);
+        }
+
+        public void AddOnRecipeAddedCallback(UnityAction<RecipeRuntime> callback)
+        {
+            onRecipeAddedEvent.AddListener(callback);
+        }
+
+        public void RemoveOnRecipeAddedCallback(UnityAction<RecipeRuntime> callback)
+        {
+            onRecipeAddedEvent.RemoveListener(callback);
         }
     }
 }

@@ -4,6 +4,7 @@ using PolyAndCode.UI;
 using UnityEngine;
 using Cooking.Core.Record;
 using Cooking.Core.Runtime;
+using System.Dynamic;
 
 namespace Cooking.Core.UI
 {
@@ -27,20 +28,32 @@ namespace Cooking.Core.UI
 
 		private void Start()
 		{
-			SetUpUI();
-		}
+			SetupUI();
 
-		#endregion
+            scrollRect.Initialize(this);
+        }
 
-		private void SetUpUI()
+        private void OnEnable()
+        {
+            recipeRecord.AddOnRecipeAddedCallback(OnRecipeAdded);
+        }
+
+        private void OnDisable()
+        {
+			recipeRecord.RemoveOnRecipeAddedCallback(OnRecipeAdded);
+        }
+
+        #endregion
+
+        private void SetupUI()
 		{
+			recipeCellData.Clear();
+
 			for (int i = 0, n = recipeRecord.NumRecipes; i < n; ++i)
 			{
 				RecipeRuntime recipe = recipeRecord.GetRecipe(i);
 				recipeCellData.Add(new RecipeUIData(recipe));
 			}
-
-			scrollRect.Initialize(this);
 		}
 
 		#region IRecyclableScrollRectDataSource
@@ -54,6 +67,17 @@ namespace Cooking.Core.UI
 		{
 			(cell as RecipeUI).Hookup(recipeCellData[index]);
 		}
+
+		#endregion
+
+		#region Callbacks
+
+		private void OnRecipeAdded(RecipeRuntime recipeRuntime)
+		{
+			SetupUI();
+
+			scrollRect.ReloadData();
+        }
 
 		#endregion
 	}

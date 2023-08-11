@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c12f6a8868e964ea590eb265a21897, type: 3}
-  m_Name: RecipeRecord
+  m_Script: {fileID: 11500000, guid: 5ee88001fcc83c64e81253193b024439, type: 3}
+  m_Name: SaveImageRecord
   m_EditorClassIdentifier: 
-  saveRecipeRecordEvent: {fileID: 11400000, guid: 924111d4363e0264da61b8b95cf2dd2b, type: 2}
-  onRecipeAddedEvent:
-    bakedEvent: {fileID: 0}
+  helpText: 

@@ -1,5 +1,6 @@
 ﻿using Celeste.Events;
 using Cooking.Core.Parameters;
+using Cooking.Core.Record;
 using Cooking.Core.Runtime;
 using Cooking.Core.UI;
 using System;
@@ -31,6 +32,7 @@ namespace Cooking.Instructions.UI
 
         [Header("Data")]
         [SerializeField] private RecipeRuntimeValue currentRecipe;
+        [SerializeField] private ImageRecord imageRecord;
 
         [Header("Events")]
         [SerializeField] private ShowPopupEvent showWebCamCapturePopupEvent;
@@ -76,13 +78,18 @@ namespace Cooking.Instructions.UI
             List<ImageCarouselData> stepImagesData = new List<ImageCarouselData>();
             if (currentRecipeStep.HasImages)
             {
-                foreach (Sprite image in currentRecipeStep.Images)
+                foreach (ImageRuntime image in currentRecipeStep.Images)
                 {
+                    if (image.NeedsResolving)
+                    {
+                        image.Resolve(imageRecord);
+                    }
+
                     stepImagesData.Add(new ImageCarouselData(image));
                 }
-
-                stepImages.Setup(stepImagesData);
             }
+            
+            stepImages.Setup(stepImagesData);
         }
 
         #region Callbacks

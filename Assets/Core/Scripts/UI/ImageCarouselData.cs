@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Cooking.Core.Runtime;
+using UnityEngine;
 
 namespace Cooking.Core.UI
 {
@@ -6,9 +7,9 @@ namespace Cooking.Core.UI
     {
         public Sprite Image { get; }
 
-        public ImageCarouselData(Sprite image)
+        public ImageCarouselData(ImageRuntime imageRuntime)
         {
-            Image = image;
+            Image = imageRuntime.Image;
         }
     }
 }

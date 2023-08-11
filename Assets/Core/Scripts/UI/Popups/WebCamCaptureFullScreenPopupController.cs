@@ -1,6 +1,7 @@
-﻿using Celeste.Core;
-using Celeste.Events;
+﻿using Celeste.Events;
 using Celeste.UI;
+using Celeste.UI.Popups;
+using Cooking.Core.Record;
 using Cooking.Core.Runtime;
 using System.Collections;
 using System.IO;
@@ -24,8 +25,13 @@ namespace Cooking.Core.UI
     {
         #region Properties and Fields
 
+        [Header("UI Elements")]
+        [SerializeField] private Popup popup;
         [SerializeField] private RawImage webCameraOutput;
         [SerializeField] private AspectRatioFitter fitter;
+
+        [Header("Data")]
+        [SerializeField] private ImageRecord imageRecord;
 
         private WebCamTexture webCamTexture;
         private WebCamCapturePopupArgs popupArgs;
@@ -71,11 +77,10 @@ namespace Cooking.Core.UI
             photo.SetPixels(webCamTexture.GetPixels());
             photo.Apply();
 
-            byte[] bytes = photo.EncodeToPNG();
-            File.WriteAllBytes(Path.Combine(Application.persistentDataPath, $"{GameTime.UtcNowTimestamp}.png"), bytes);
+            Sprite newImage = imageRecord.SaveImage(photo);
+            popupArgs.CurrentStepRuntime.AddImage(newImage);
 
-            Sprite sprite = Sprite.Create(photo, new Rect(0, 0, photo.width, photo.height), new Vector2(0.5f, 0.5f), 100);
-            popupArgs.CurrentStepRuntime.AddImage(sprite);
+            popup.Hide();
         }
 
         #region Unity Methods
