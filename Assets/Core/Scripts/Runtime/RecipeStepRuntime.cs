@@ -71,19 +71,19 @@ namespace Cooking.Core.Runtime
             switch ((RecipeStepEditCommandType)editCommandDTO.type)
             {
                 case RecipeStepEditCommandType.EditDescription:
-                    RecipeStepEditDescriptionCommand editDescription = RecipeStepEditCommandFactory.Create<RecipeStepEditDescriptionCommand>(editCommandDTO.data);
+                    RecipeStepEditDescriptionCommand editDescription = CommandFactory.Create<RecipeStepEditDescriptionCommand>(editCommandDTO.data);
                     description = editDescription.Description;
                     edits.Add(editDescription);
                     break;
 
                 case RecipeStepEditCommandType.AddImage:
-                    RecipeStepAddImageCommand addImage = RecipeStepEditCommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
+                    RecipeStepAddImageCommand addImage = CommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
                     images.Add(new ImageRuntime(addImage.ImageId));
                     edits.Add(addImage);
                     break;
 
                 default:
-                    UnityEngine.Debug.LogAssertion($"Could not find suitable edit command for type: {editCommandDTO.type}.");
+                    UnityEngine.Debug.LogAssertion($"Could not find suitable {nameof(RecipeStepEditCommand)} for type: {editCommandDTO.type}.");
                     break;
             }
         }

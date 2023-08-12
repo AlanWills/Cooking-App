@@ -9,6 +9,7 @@ namespace Cooking.Core.Persistence
     {
         public string guid;
         public string displayName;
+        public List<RecipeEditCommandDTO> edits = new List<RecipeEditCommandDTO>();
         public List<RecipeStepDTO> recipeStepDTOs = new List<RecipeStepDTO>();
 
         public RecipeDTO(RecipeRuntime recipeRuntime)
@@ -16,6 +17,11 @@ namespace Cooking.Core.Persistence
             guid = recipeRuntime.Guid;
             displayName = recipeRuntime.DisplayName;
             recipeStepDTOs.Capacity = recipeRuntime.NumSteps;
+
+            foreach (var edit in recipeRuntime.Edits)
+            {
+                edits.Add(new RecipeEditCommandDTO(edit));
+            }
 
             for (int i = 0, n = recipeRuntime.NumSteps; i < n; ++i)
             {
