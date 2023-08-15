@@ -11,7 +11,18 @@ namespace Cooking.Core.Runtime
     {
         #region Properties and Fields
 
-        public string Title { get; }
+        public string Title
+        {
+            get => title;
+            set
+            {
+                if (string.CompareOrdinal(title, value) != 0)
+                {
+                    title = value;
+                    AddEdit(new RecipeStepEditTitleCommand(value));
+                }
+            }
+        }
 
         public string Description
         {
@@ -26,17 +37,74 @@ namespace Cooking.Core.Runtime
             }
         }
 
-        public string Tip { get; private set; }
-        public string Warning { get; private set; }
-        public string Recommendation { get; private set; }
-        public string Explanation { get; }
+        public string Tip
+        {
+            get => tip;
+            set
+            {
+                if (string.CompareOrdinal(tip, value) != 0)
+                {
+                    tip = value;
+                    AddEdit(new RecipeStepEditTipCommand(value));
+                }
+            }
+        }
+
+        public string Warning
+        {
+            get => warning;
+            set
+            {
+                if (string.CompareOrdinal(warning, value) != 0)
+                {
+                    warning = value;
+                    AddEdit(new RecipeStepEditWarningCommand(value));
+                }
+            }
+        }
+
+        public string Recommendation
+        {
+            get => recommendation;
+            set
+            {
+                if (string.CompareOrdinal(recommendation, value) != 0)
+                {
+                    recommendation = value;
+                    AddEdit(new RecipeStepEditRecommendationCommand(value));
+                }
+            }
+        }
+
+        public string Explanation
+        {
+            get => explanation;
+            set
+            {
+                if (string.CompareOrdinal(explanation, value) != 0)
+                {
+                    explanation = value;
+                    AddEdit(new RecipeStepEditExplanationCommand(value));
+                }
+            }
+        }
+
         public bool HasImages => images.Count > 0;
         public IReadOnlyList<ImageRuntime> Images => images;
-        public IReadOnlyList<RecipeStepEditCommand> Edits => edits;
 
+        public IReadOnlyList<RecipeStepEditCommand> InitialEdits => initialEdits;
+        public bool HasCustomEdits => customEdits.Count > 0;
+        public IReadOnlyList<RecipeStepEditCommand> CustomEdits => customEdits;
+
+        private string title;
         private string description;
+        private string tip;
+        private string warning;
+        private string recommendation;
+        private string explanation;
         private List<ImageRuntime> images = new List<ImageRuntime>();
-        private List<RecipeStepEditCommand> edits = new List<RecipeStepEditCommand>();
+        private List<RecipeStepEditCommand> initialEdits = new List<RecipeStepEditCommand>();
+        private List<RecipeStepEditCommand> customEdits = new List<RecipeStepEditCommand>();
         private Action onRecipeStepChangedEvent;
 
         #endregion
@@ -45,16 +113,28 @@ namespace Cooking.Core.Runtime
 
         public RecipeStepRuntime(RecipeStep recipeStep)
         {
-            Title = recipeStep.Title;
-            description= recipeStep.Description;
-            Tip = recipeStep.Tip;
-            Warning = recipeStep.Warning;
-            Recommendation = recipeStep.Recommendation;
-            Explanation = recipeStep.Explanation;
+            title = recipeStep.Title;
+            initialEdits.Add(new RecipeStepEditTitleCommand(title));
+
+            description = recipeStep.Description;
+            initialEdits.Add(new RecipeStepEditDescriptionCommand(description));
+
+            tip = recipeStep.Tip;
+            initialEdits.Add(new RecipeStepEditTipCommand(tip));
+
+            warning = recipeStep.Warning;
+            initialEdits.Add(new RecipeStepEditWarningCommand(warning));
+
+            recommendation = recipeStep.Recommendation;
+            initialEdits.Add(new RecipeStepEditRecommendationCommand(recommendation));
+
+            explanation = recipeStep.Explanation;
+            initialEdits.Add(new RecipeStepEditExplanationCommand(explanation));
 
             foreach (Sprite image in recipeStep.Images)
             {
                 images.Add(new ImageRuntime(image));
+                initialEdits.Add(new RecipeStepAddImageCommand(image.name));
             }
         }
 
@@ -70,16 +150,60 @@ namespace Cooking.Core.Runtime
         {
             switch ((RecipeStepEditCommandType)editCommandDTO.type)
             {
+                case RecipeStepEditCommandType.EditTitle:
+                    {
+                        RecipeStepEditTitleCommand editTitle = CommandFactory.Create<RecipeStepEditTitleCommand>(editCommandDTO.data);
+                        title = editTitle.Title;
+                        customEdits.Add(editTitle);
+                    }
+                    break;
+
                 case RecipeStepEditCommandType.EditDescription:
-                    RecipeStepEditDescriptionCommand editDescription = CommandFactory.Create<RecipeStepEditDescriptionCommand>(editCommandDTO.data);
-                    description = editDescription.Description;
-                    edits.Add(editDescription);
+                    {
+                        RecipeStepEditDescriptionCommand editDescription = CommandFactory.Create<RecipeStepEditDescriptionCommand>(editCommandDTO.data);
+                        description = editDescription.Description;
+                        customEdits.Add(editDescription);
+                    }
+                    break;
+
+                case RecipeStepEditCommandType.EditTip:
+                    {
+                        RecipeStepEditTipCommand editTip = CommandFactory.Create<RecipeStepEditTipCommand>(editCommandDTO.data);
+                        tip = editTip.Tip;
+                        customEdits.Add(editTip);
+                    }
+                    break;
+
+                case RecipeStepEditCommandType.EditWarning:
+                    {
+                        RecipeStepEditWarningCommand editWarning = CommandFactory.Create<RecipeStepEditWarningCommand>(editCommandDTO.data);
+                        warning = editWarning.Warning;
+                        customEdits.Add(editWarning);
+                    }
+                    break;
+
+                case RecipeStepEditCommandType.EditRecommendation:
+                    {
+                        RecipeStepEditRecommendationCommand editRecommendation = CommandFactory.Create<RecipeStepEditRecommendationCommand>(editCommandDTO.data);
+                        recommendation = editRecommendation.Recommendation;
+                        customEdits.Add(editRecommendation);
+                    }
+                    break;
+
+                case RecipeStepEditCommandType.EditExplanation:
+                    {
+                        RecipeStepEditExplanationCommand editExplanation = CommandFactory.Create<RecipeStepEditExplanationCommand>(editCommandDTO.data);
+                        explanation = editExplanation.Explanation;
+                        customEdits.Add(editExplanation);
+                    }
                     break;
 
                 case RecipeStepEditCommandType.AddImage:
-                    RecipeStepAddImageCommand addImage = CommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
-                    images.Add(new ImageRuntime(addImage.ImageId));
-                    edits.Add(addImage);
+                    {
+                        RecipeStepAddImageCommand addImage = CommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
+                        images.Add(new ImageRuntime(addImage.ImageId));
+                        customEdits.Add(addImage);
+                    }
                     break;
 
                 default:
@@ -90,7 +214,7 @@ namespace Cooking.Core.Runtime
 
         private void AddEdit(RecipeStepEditCommand editCommand)
         {
-            edits.Add(editCommand);
+            customEdits.Add(editCommand);
             onRecipeStepChangedEvent?.Invoke();
         }
 
@@ -99,6 +223,8 @@ namespace Cooking.Core.Runtime
             images.Add(new ImageRuntime(image));
             AddEdit(new RecipeStepAddImageCommand(image.name));
         }
+
+        #region Callbacks
 
         public void AddOnRecipeStepChangedCallback(Action onRecipeChanged)
         {
@@ -109,5 +235,7 @@ namespace Cooking.Core.Runtime
         {
             onRecipeStepChangedEvent -= onRecipeChanged;
         }
+
+        #endregion
     }
 }

@@ -1,4 +1,5 @@
 using Cooking.Core.Record;
+using Cooking.Core.Runtime;
 using System;
 using System.Collections.Generic;
 
@@ -15,7 +16,12 @@ namespace Cooking.Core.Persistence
 
             for (int i = 0, n = recipeRecord.NumRecipes; i < n; ++i)
             {
-                recipeDTOs.Add(new RecipeDTO(recipeRecord.GetRecipe(i)));
+                RecipeRuntime recipe = recipeRecord.GetRecipe(i);
+
+                if (recipe.HasCustomEdits)
+                {
+                    recipeDTOs.Add(new RecipeDTO(recipe));
+                }
             }
         }
     }

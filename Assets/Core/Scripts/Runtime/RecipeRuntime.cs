@@ -29,10 +29,14 @@ namespace Cooking.Core.Runtime
 
         public Sprite Thumbnail { get; }
         public int NumSteps => steps.Count;
-        public IReadOnlyList<RecipeEditCommand> Edits => edits;
+
+        public IReadOnlyList<RecipeEditCommand> InitialEdits => initialEdits;
+        public bool HasCustomEdits => customEdits.Count > 0 || steps.Exists(x => x.HasCustomEdits);
+        public IReadOnlyList<RecipeEditCommand> CustomEdits => customEdits;
 
         private string displayName;
-        private List<RecipeEditCommand> edits = new List<RecipeEditCommand>();
+        private List<RecipeEditCommand> initialEdits = new List<RecipeEditCommand>();
+        private List<RecipeEditCommand> customEdits = new List<RecipeEditCommand>();
         private List<RecipeStepRuntime> steps = new List<RecipeStepRuntime>();
         private Action onRecipeChangedEvent;
 
@@ -53,14 +57,18 @@ namespace Cooking.Core.Runtime
         public RecipeRuntime(Recipe recipe)
         {
             Guid = recipe.Guid;
-            DisplayName = recipe.DisplayName;
             Thumbnail = recipe.Thumbnail;
+            
+            displayName = recipe.DisplayName;
+            initialEdits.Add(new RecipeEditDisplayNameCommand(displayName));
 
-            foreach (RecipeStep recipeStep in recipe.Steps)
+            for (int i = 0, n = recipe.Steps.Count; i < n; ++i)
             {
+                RecipeStep recipeStep  = recipe.Steps[i];
                 RecipeStepRuntime recipeStepRuntime = new RecipeStepRuntime(recipeStep);
                 recipeStepRuntime.AddOnRecipeStepChangedCallback(OnRecipeStepChanged);
                 steps.Add(recipeStepRuntime);
+                initialEdits.Add(new RecipeEditAddStepCommand(i));
             }
         }
 
@@ -84,13 +92,13 @@ namespace Cooking.Core.Runtime
                 case RecipeEditCommandType.EditDisplayName:
                     RecipeEditDisplayNameCommand editDisplayName = CommandFactory.Create<RecipeEditDisplayNameCommand>(editCommandDTO.data);
                     displayName = editDisplayName.DisplayName;
-                    edits.Add(editDisplayName);
+                    customEdits.Add(editDisplayName);
                     break;
 
                 case RecipeEditCommandType.AddStep:
                     RecipeEditAddStepCommand addStep = CommandFactory.Create<RecipeEditAddStepCommand>(editCommandDTO.data);
-                    steps.Add(new RecipeStepRuntime());
-                    edits.Add(addStep);
+                    InsertStepImpl(addStep.Index);
+                    customEdits.Add(addStep);
                     break;
 
                 default:
@@ -106,17 +114,49 @@ namespace Cooking.Core.Runtime
 
         public RecipeStepRuntime AddStep()
         {
-            RecipeStepRuntime recipeStepRuntime = new RecipeStepRuntime();
-            steps.Add(recipeStepRuntime);
-            edits.Add(new RecipeEditAddStepCommand());
+            return InsertStep(NumSteps);
+        }
+
+        public void RemoveStep(int index)
+        {
+            steps.RemoveAt(index);
+        }
+
+        public RecipeStepRuntime InsertStep(int index)
+        {
+            RecipeStepRuntime recipeStepRuntime = InsertStepImpl(index);
+            customEdits.Add(new RecipeEditAddStepCommand(index));
             onRecipeChangedEvent?.Invoke();
+
+            return recipeStepRuntime;
+        }
+
+        private RecipeStepRuntime InsertStepImpl(int index)
+        {
+            RecipeStepRuntime recipeStepRuntime = new RecipeStepRuntime();
+
+            if (index >= steps.Count)
+            {
+                steps.Add(recipeStepRuntime);
+            }
+            else
+            {
+                steps.Insert(index, recipeStepRuntime);
+            }
 
             return recipeStepRuntime;
         }
 
         private void AddEdit(RecipeEditCommand editCommand)
         {
-            edits.Add(editCommand);
+            customEdits.Add(editCommand);
+            onRecipeChangedEvent?.Invoke();
+        }
+
+        #region Callbacks
+
+        private void OnRecipeStepChanged()
+        {
             onRecipeChangedEvent?.Invoke();
         }
 
@@ -128,13 +168,6 @@ namespace Cooking.Core.Runtime
         public void RemoveOnRecipeChangedCallback(Action onRecipeChanged)
         {
             onRecipeChangedEvent -= onRecipeChanged;
-        }
-
-        #region Callbacks
-
-        private void OnRecipeStepChanged()
-        {
-            onRecipeChangedEvent?.Invoke();
         }
 
         #endregion

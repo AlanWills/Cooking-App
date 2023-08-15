@@ -1,13 +1,7 @@
 ﻿using Celeste.Events;
 using Cooking.Core.Parameters;
-using Cooking.Core.Record;
-using Cooking.Core.Runtime;
-using Cooking.Core.UI;
 using System;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Cooking.Instructions.UI
 {
@@ -17,133 +11,72 @@ namespace Cooking.Instructions.UI
         #region Properties and Fields
 
         [Header("UI Elements")]
-        [SerializeField] private TextMeshProUGUI stepTitle;
-        [SerializeField] private TMP_InputField stepDescription;
-        [SerializeField] private ImageCarouselView stepImages;
-        [SerializeField] private TextMeshProUGUI stepUtilityText;
-        [SerializeField] private TextMeshProUGUI editButtonText;
-        [SerializeField] private Button tipButton;
-        [SerializeField] private Button warningButton;
-        [SerializeField] private Button recommendationButton;
-        [SerializeField] private Button explanationButton;
-        [SerializeField] private Button previousStepButton;
-        [SerializeField] private TextMeshProUGUI previousStepButtonText;
-        [SerializeField] private TextMeshProUGUI nextStepButtonText;
+        [SerializeField] private RecipeStepNonEditModeUI nonEditModeUI;
+        [SerializeField] private RecipeStepEditModeUI editModeUI;
 
         [Header("Data")]
         [SerializeField] private RecipeRuntimeValue currentRecipe;
-        [SerializeField] private ImageRecord imageRecord;
 
         [Header("Events")]
         [SerializeField] private ShowPopupEvent showWebCamCapturePopupEvent;
 
-        [NonSerialized] private RecipeStepRuntime currentRecipeStep;
+        [NonSerialized] private int currentStepIndex;
 
         #endregion
 
-        private void SetupUI(int currentStepIndex)
+        private void RefreshUI(int currentStepIndex)
         {
-            if (currentStepIndex >= currentRecipe.Value.NumSteps)
-            {
-                // Don't refresh the UI if we've moved past the final step
-                Debug.LogAssertion($"Reached invalid step index {currentRecipeStep} of recipe {currentRecipe.Value.DisplayName}.  Was expecting a number less than {currentRecipe.Value.NumSteps}.");
-                return;
-            }
+            this.currentStepIndex = currentStepIndex;
 
-            currentRecipeStep = currentRecipe.Value.GetStep(currentStepIndex);
-
-            previousStepButton.interactable = currentStepIndex > 0;
-            previousStepButtonText.color = currentStepIndex > 0 ? Color.white : Color.black;
-            nextStepButtonText.text = currentStepIndex < currentRecipe.Value.NumSteps - 1 ? "Next" : "Finish";
-
-            RefreshCurrentStepUI();
+            StopEditing();
         }
 
-        private void RefreshCurrentStepUI()
+        private void StartEditing()
         {
-            stepTitle.text = currentRecipeStep.Title;
-            stepDescription.text = currentRecipeStep.Description;
-
-            RefreshImages();
-
-            stepUtilityText.text = "";
-            tipButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Tip);
-            warningButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Warning);
-            recommendationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Recommendation);
-            explanationButton.interactable = !string.IsNullOrEmpty(currentRecipeStep.Explanation);
+            nonEditModeUI.TearDownUI();
+            nonEditModeUI.gameObject.SetActive(false);
+            editModeUI.gameObject.SetActive(true);
+            editModeUI.SetupUI(currentStepIndex);
         }
 
-        private void RefreshImages()
+        private void StopEditing()
         {
-            List<ImageCarouselData> stepImagesData = new List<ImageCarouselData>();
-            if (currentRecipeStep.HasImages)
-            {
-                foreach (ImageRuntime image in currentRecipeStep.Images)
-                {
-                    if (image.NeedsResolving)
-                    {
-                        image.Resolve(imageRecord);
-                    }
-
-                    stepImagesData.Add(new ImageCarouselData(image));
-                }
-            }
-            
-            stepImages.Setup(stepImagesData);
+            editModeUI.TearDownUI();
+            editModeUI.gameObject.SetActive(false);
+            nonEditModeUI.gameObject.SetActive(true);
+            nonEditModeUI.SetupUI(currentStepIndex);
         }
 
         #region Callbacks
 
         public void OnCurrentStepChanged(ValueChangedArgs<int> args)
         {
-            SetupUI(args.newValue);
-        }
-
-        public void OnTakePictureButtonPressed()
-        {
-            showWebCamCapturePopupEvent.Invoke(new WebCamCapturePopupArgs(currentRecipeStep));
-        }
-
-        public void OnWebCamCapturePopupClosed()
-        {
-            RefreshImages();
+            RefreshUI(args.newValue);
         }
 
         public void OnEditPressed()
         {
-            if (stepDescription.IsInteractable())
-            {
-                currentRecipeStep.Description = stepDescription.text;
-                stepDescription.DeactivateInputField();
-                stepDescription.interactable = false;
-                editButtonText.text = "Edit";
-            }
-            else
-            {
-                stepDescription.interactable = true;
-                stepDescription.ActivateInputField();
-                editButtonText.text = "Save";
-            }
+            StartEditing();
         }
 
-        public void OnTipPressed()
+        public void OnSavePressed()
         {
-            stepUtilityText.text = currentRecipeStep.Tip;
+            StopEditing();
         }
 
-        public void OnWarningPressed()
+        public void OnRemoveStepPressed()
         {
-            stepUtilityText.text = currentRecipeStep.Warning;
+            currentRecipe.Value.RemoveStep(currentStepIndex);
+
+            // Show the same step index, unless this was the very last step, in which case show the new last step
+            RefreshUI(Mathf.Min(currentStepIndex, currentRecipe.Value.NumSteps - 1));
         }
 
-        public void OnRecommendationPressed()
+        public void OnAddStepPressed()
         {
-            stepUtilityText.text = currentRecipeStep.Recommendation;
-        }
+            currentRecipe.Value.InsertStep(currentStepIndex);
 
-        public void OnExplanationPressed()
-        {
-            stepUtilityText.text = currentRecipeStep.Explanation;
+            RefreshUI(currentStepIndex + 1);
         }
 
         #endregion

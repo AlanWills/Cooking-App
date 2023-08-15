@@ -18,7 +18,12 @@ namespace Cooking.Core.Persistence
             displayName = recipeRuntime.DisplayName;
             recipeStepDTOs.Capacity = recipeRuntime.NumSteps;
 
-            foreach (var edit in recipeRuntime.Edits)
+            foreach (var edit in recipeRuntime.InitialEdits)
+            {
+                edits.Add(new RecipeEditCommandDTO(edit));
+            }
+
+            foreach (var edit in recipeRuntime.CustomEdits)
             {
                 edits.Add(new RecipeEditCommandDTO(edit));
             }

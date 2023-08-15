@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Cooking.Core.Commands
 {
@@ -9,6 +10,17 @@ namespace Cooking.Core.Commands
 
         public override RecipeEditCommandType Type => RecipeEditCommandType.AddStep;
 
+        public int Index => index;
+
+        [SerializeField] private int index = -1;
+
         #endregion
+
+        public RecipeEditAddStepCommand() { }
+
+        public RecipeEditAddStepCommand(int index)
+        {
+            this.index = index;
+        }
     }
 }

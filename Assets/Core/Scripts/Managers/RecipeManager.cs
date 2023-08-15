@@ -31,26 +31,19 @@ namespace Cooking.Core.Managers
 
         protected override void Deserialize(RecipeManagerDTO dto)
         {
-            foreach (Recipe recipe in recipeCatalogue)
+            foreach (RecipeDTO recipeDTO in dto.recipeDTOs)
             {
-                RecipeRuntime recipeRuntime = new RecipeRuntime(recipe);
-                RecipeDTO recipeDTO = dto.recipeDTOs.Find(x => string.CompareOrdinal(x.guid, recipe.Guid) == 0);
-
-                if (recipeDTO != null)
-                {
-                    recipeRuntime.Load(recipeDTO);
-                }
-
+                RecipeRuntime recipeRuntime = new RecipeRuntime(recipeDTO.guid, recipeDTO.displayName);
+                recipeRuntime.Load(recipeDTO);
                 recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
                 recipeRecord.AddRecipe(recipeRuntime);
             }
 
-            foreach (RecipeDTO recipeDTO in dto.recipeDTOs)
+            foreach (Recipe recipe in recipeCatalogue)
             {
-                if (recipeRecord.FindRecipe(x => x.Guid == recipeDTO.guid) == null)
+                if (recipeRecord.FindRecipe(x => x.Guid == recipe.Guid) == null)
                 {
-                    RecipeRuntime recipeRuntime = new RecipeRuntime(recipeDTO.guid, recipeDTO.displayName);
-                    recipeRuntime.Load(recipeDTO);
+                    RecipeRuntime recipeRuntime = new RecipeRuntime(recipe);
                     recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
                     recipeRecord.AddRecipe(recipeRuntime);
                 }
