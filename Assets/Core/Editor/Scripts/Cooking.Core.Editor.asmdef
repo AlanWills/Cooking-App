@@ -6,8 +6,12 @@
         "Celeste.Persistence",
         "Celeste.Objects",
         "Celeste.DataStructures",
+        "Celeste.OdinSerializer",
         "Celeste.DataStructures.Editor",
-        "Celeste.Persistence.Editor"
+        "Celeste.Persistence.Editor",
+        "Celeste.BuildSystem.Editor",
+        "Celeste.Tools.Editor",
+        "Celeste.Objects.Editor"
     ],
     "includePlatforms": [
         "Editor"
