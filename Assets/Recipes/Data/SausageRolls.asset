@@ -15,6 +15,22 @@ MonoBehaviour:
   guid: ce5197f0-c6ae-49af-b2a5-e63f9c6bffc0
   displayName: Sausage Rolls
   thumbnail: {fileID: 21300000, guid: a3a7d2f4958664d4e89479193c59b47a, type: 3}
+  ingredients:
+  - Ingredient: {fileID: 11400000, guid: 84e095b763c9bbb4eac73a7bd47b7a6d, type: 2}
+    Unit: 0
+    Type: 0
+    Quantity: 500
+    Optional: 0
+  - Ingredient: {fileID: 11400000, guid: 6c56ccea147f46d4e89fcf1a9a00c3d4, type: 2}
+    Unit: 0
+    Type: 0
+    Quantity: 600
+    Optional: 0
+  - Ingredient: {fileID: 11400000, guid: a9b2510fb2147b94fa4ae917fb0a9484, type: 2}
+    Unit: 3
+    Type: 0
+    Quantity: 1
+    Optional: 1
   steps:
   - title: Prepare Pastry
     description: Remove your pastry from the fridge.

@@ -12,17 +12,17 @@ namespace CookingEditor.Core.Catalogue
     [CustomEditor(typeof(RecipeCatalogue))]
     public class RecipeCatalogueEditor : IIndexableItemsEditor<Recipe>
     {
-        private ImageRecord imageRecord;
+        private ImageCatalogue imageCatalogue;
 
         public override void OnInspectorGUI()
         {
-            imageRecord = CelesteEditorGUILayout.ObjectField(imageRecord);
+            imageCatalogue = CelesteEditorGUILayout.ObjectField(imageCatalogue);
 
-            using (new DisabledScope(imageRecord == null))
+            using (new DisabledScope(imageCatalogue == null))
             {
                 if (GUILayout.Button("Bake Recipe Sprites"))
                 {
-                    (target as RecipeCatalogue).AddRecipeImagesTo(imageRecord);
+                    (target as RecipeCatalogue).AddRecipeImagesTo(imageCatalogue);
                     AssetDatabase.SaveAssetIfDirty(target);
                 }
             }

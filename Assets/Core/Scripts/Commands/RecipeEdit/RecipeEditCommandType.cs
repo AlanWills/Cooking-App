@@ -4,5 +4,6 @@
     {
         EditDisplayName,
         AddStep,
+        AddIngredient
     }
 }

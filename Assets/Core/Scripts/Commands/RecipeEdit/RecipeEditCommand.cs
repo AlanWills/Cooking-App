@@ -7,7 +7,7 @@ namespace Cooking.Core.Commands
     {
         #region Properties and Fields
 
-        public abstract RecipeEditCommandType Type { get; }
+        public abstract RecipeEditCommandType CommandType { get; }
 
         #endregion
     }

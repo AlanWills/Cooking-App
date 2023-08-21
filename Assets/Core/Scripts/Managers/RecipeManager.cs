@@ -19,6 +19,7 @@ namespace Cooking.Core.Managers
 
         [SerializeField] private RecipeCatalogue recipeCatalogue;
         [SerializeField] private RecipeRecord recipeRecord;
+        [SerializeField] private IngredientCatalogue ingredientCatalogue;
 
         #endregion
 
@@ -34,7 +35,7 @@ namespace Cooking.Core.Managers
             foreach (RecipeDTO recipeDTO in dto.recipeDTOs)
             {
                 RecipeRuntime recipeRuntime = new RecipeRuntime(recipeDTO.guid, recipeDTO.displayName);
-                recipeRuntime.Load(recipeDTO);
+                recipeRuntime.Load(recipeDTO, ingredientCatalogue);
                 recipeRuntime.AddOnRecipeChangedCallback(OnRecipeChanged);
                 recipeRecord.AddRecipe(recipeRuntime);
             }

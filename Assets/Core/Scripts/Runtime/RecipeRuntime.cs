@@ -1,4 +1,5 @@
 ﻿using Celeste.DataStructures;
+using Cooking.Core.Catalogue;
 using Cooking.Core.Commands;
 using Cooking.Core.Objects;
 using Cooking.Core.Persistence;
@@ -22,7 +23,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(displayName, value) != 0)
                 {
                     displayName = value;
-                    AddEdit(new RecipeEditDisplayNameCommand(value));
+                    AddCustomEdit(new RecipeEditDisplayNameCommand(value));
                 }
             }
         }
@@ -35,10 +36,12 @@ namespace Cooking.Core.Runtime
         public IReadOnlyList<RecipeEditCommand> CustomEdits => customEdits;
 
         private string displayName;
-        private List<RecipeEditCommand> initialEdits = new List<RecipeEditCommand>();
-        private List<RecipeEditCommand> customEdits = new List<RecipeEditCommand>();
+        private List<IngredientRuntime> ingredients = new List<IngredientRuntime>();
         private List<RecipeStepRuntime> steps = new List<RecipeStepRuntime>();
         private Action onRecipeChangedEvent;
+
+        private List<RecipeEditCommand> initialEdits = new List<RecipeEditCommand>();
+        private List<RecipeEditCommand> customEdits = new List<RecipeEditCommand>();
 
         #endregion
 
@@ -62,6 +65,14 @@ namespace Cooking.Core.Runtime
             displayName = recipe.DisplayName;
             initialEdits.Add(new RecipeEditDisplayNameCommand(displayName));
 
+            for (int i = 0, n = recipe.Ingredients.Count; i < n; ++i)
+            {
+                IngredientInfo ingredientQuantity = recipe.Ingredients[i];
+                IngredientRuntime ingredientRuntime = new IngredientRuntime(ingredientQuantity);
+                ingredients.Add(ingredientRuntime);
+                initialEdits.Add(new RecipeEditAddIngredientCommand(i, ingredientQuantity));
+            }
+
             for (int i = 0, n = recipe.Steps.Count; i < n; ++i)
             {
                 RecipeStep recipeStep  = recipe.Steps[i];
@@ -72,11 +83,11 @@ namespace Cooking.Core.Runtime
             }
         }
 
-        public void Load(RecipeDTO recipeDTO)
+        public void Load(RecipeDTO recipeDTO, IngredientCatalogue ingredientCatalogue)
         {
             foreach (RecipeEditCommandDTO editCommandDTO in recipeDTO.edits)
             {
-                LoadEdit(editCommandDTO);
+                LoadEdit(editCommandDTO, ingredientCatalogue);
             }
 
             for (int i = 0, n = recipeDTO.recipeStepDTOs.Count; i < n; ++i)
@@ -85,7 +96,7 @@ namespace Cooking.Core.Runtime
             }
         }
 
-        private void LoadEdit(RecipeEditCommandDTO editCommandDTO)
+        private void LoadEdit(RecipeEditCommandDTO editCommandDTO, IngredientCatalogue ingredientCatalogue)
         {
             switch ((RecipeEditCommandType)editCommandDTO.type)
             {
@@ -99,6 +110,19 @@ namespace Cooking.Core.Runtime
                     RecipeEditAddStepCommand addStep = CommandFactory.Create<RecipeEditAddStepCommand>(editCommandDTO.data);
                     InsertStepImpl(addStep.Index);
                     customEdits.Add(addStep);
+                    break;
+
+                case RecipeEditCommandType.AddIngredient:
+                    RecipeEditAddIngredientCommand addIngredient = CommandFactory.Create<RecipeEditAddIngredientCommand>(editCommandDTO.data);
+                    Ingredient ingredient = ingredientCatalogue.FindByGuid(addIngredient.Guid);
+                    UnityEngine.Debug.Assert(ingredient != null, $"Failed to find ingredient with Guid {addIngredient.Guid}");
+
+                    if (ingredient != null)
+                    {
+                        InsertIngredientImpl(addIngredient, ingredient);
+                        customEdits.Add(addIngredient);
+                    }
+                    
                     break;
 
                 default:
@@ -147,7 +171,31 @@ namespace Cooking.Core.Runtime
             return recipeStepRuntime;
         }
 
-        private void AddEdit(RecipeEditCommand editCommand)
+        private IngredientRuntime InsertIngredientImpl(
+            RecipeEditAddIngredientCommand insertIngredientCommand, 
+            Ingredient ingredient)
+        {
+            int index = insertIngredientCommand.Index;
+            IngredientRuntime ingredientRuntime = new IngredientRuntime(
+                ingredient, 
+                insertIngredientCommand.Unit, 
+                insertIngredientCommand.Type,
+                insertIngredientCommand.Quantity,
+                insertIngredientCommand.Optional);
+
+            if (index >= ingredients.Count)
+            {
+                ingredients.Add(ingredientRuntime);
+            }
+            else
+            {
+                ingredients.Insert(index, ingredientRuntime);
+            }
+
+            return ingredientRuntime;
+        }
+
+        private void AddCustomEdit(RecipeEditCommand editCommand)
         {
             customEdits.Add(editCommand);
             onRecipeChangedEvent?.Invoke();

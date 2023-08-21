@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b9d82d2385c844f94d495de28f46a8, type: 3}
+  m_Name: SausagesOrSausageMeat
+  m_EditorClassIdentifier: 
+  guid: a1bc3af3-3e9e-458c-a140-14d0c3176679
+  displayName: Sausages or Sausage Meat

@@ -224,6 +224,7 @@ MonoBehaviour:
   loadOnStart: 0
   recipeCatalogue: {fileID: 11400000, guid: b8a0cc75949c38843849273e680425a3, type: 2}
   recipeRecord: {fileID: 11400000, guid: 4c35533ee67b9864fb929fad880509bd, type: 2}
+  ingredientCatalogue: {fileID: 11400000, guid: 65037afb0016e974e81464d54e5959e7, type: 2}
 --- !u!114 &359669424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1031,7 @@ MonoBehaviour:
   snapshotRecord: {fileID: 11400000, guid: fd6e719a571ebee44825331cbb115b5f, type: 2}
   loadOnAwake: 1
   loadOnStart: 0
+  imageCatalogue: {fileID: 11400000, guid: ae0320f28072a72478fc9b14cd9837ad, type: 2}
   imageRecord: {fileID: 11400000, guid: c6e740ca29d830c4583e88627d2d2222, type: 2}
 --- !u!114 &2103302009
 MonoBehaviour:

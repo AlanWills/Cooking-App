@@ -1,10 +1,25 @@
-using Celeste.DataStructures;
 using Celeste.Objects;
+using Cooking.Core.Enums;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Cooking.Core.Objects
 {
+    #region Ingredient Quantity
+
+    [Serializable]
+    public struct IngredientInfo
+    {
+        public Ingredient Ingredient;
+        public MeasurementUnit Unit;
+        public MeasurementType Type;
+        public float Quantity;
+        public bool Optional;
+    }
+
+    #endregion
+
     [CreateAssetMenu(fileName = nameof(Recipe), menuName = "Cooking/Core/Recipe")]
     public class Recipe : ScriptableObject, IGuid
     {
@@ -24,11 +39,13 @@ namespace Cooking.Core.Objects
 
         public string DisplayName => displayName;
         public Sprite Thumbnail => thumbnail;
+        public IReadOnlyList<IngredientInfo> Ingredients => ingredients;
         public IReadOnlyList<RecipeStep> Steps => steps;
 
         [SerializeField] private string guid = System.Guid.NewGuid().ToString();
         [SerializeField] private string displayName;
         [SerializeField] private Sprite thumbnail;
+        [SerializeField] private List<IngredientInfo> ingredients = new List<IngredientInfo>();
         [SerializeField] private List<RecipeStep> steps = new List<RecipeStep>();
 
         #endregion

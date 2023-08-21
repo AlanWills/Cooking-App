@@ -19,7 +19,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(title, value) != 0)
                 {
                     title = value;
-                    AddEdit(new RecipeStepEditTitleCommand(value));
+                    AddCustomEdit(new RecipeStepEditTitleCommand(value));
                 }
             }
         }
@@ -32,7 +32,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(description, value) != 0)
                 {
                     description = value;
-                    AddEdit(new RecipeStepEditDescriptionCommand(value));
+                    AddCustomEdit(new RecipeStepEditDescriptionCommand(value));
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(tip, value) != 0)
                 {
                     tip = value;
-                    AddEdit(new RecipeStepEditTipCommand(value));
+                    AddCustomEdit(new RecipeStepEditTipCommand(value));
                 }
             }
         }
@@ -58,7 +58,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(warning, value) != 0)
                 {
                     warning = value;
-                    AddEdit(new RecipeStepEditWarningCommand(value));
+                    AddCustomEdit(new RecipeStepEditWarningCommand(value));
                 }
             }
         }
@@ -71,7 +71,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(recommendation, value) != 0)
                 {
                     recommendation = value;
-                    AddEdit(new RecipeStepEditRecommendationCommand(value));
+                    AddCustomEdit(new RecipeStepEditRecommendationCommand(value));
                 }
             }
         }
@@ -84,7 +84,7 @@ namespace Cooking.Core.Runtime
                 if (string.CompareOrdinal(explanation, value) != 0)
                 {
                     explanation = value;
-                    AddEdit(new RecipeStepEditExplanationCommand(value));
+                    AddCustomEdit(new RecipeStepEditExplanationCommand(value));
                 }
             }
         }
@@ -212,7 +212,7 @@ namespace Cooking.Core.Runtime
             }
         }
 
-        private void AddEdit(RecipeStepEditCommand editCommand)
+        private void AddCustomEdit(RecipeStepEditCommand editCommand)
         {
             customEdits.Add(editCommand);
             onRecipeStepChangedEvent?.Invoke();
@@ -221,7 +221,7 @@ namespace Cooking.Core.Runtime
         public void AddImage(Sprite image)
         {
             images.Add(new ImageRuntime(image));
-            AddEdit(new RecipeStepAddImageCommand(image.name));
+            AddCustomEdit(new RecipeStepAddImageCommand(image.name));
         }
 
         #region Callbacks

@@ -8,7 +8,7 @@ namespace Cooking.Core.Commands
     {
         #region Properties and Fields
 
-        public override RecipeEditCommandType Type => RecipeEditCommandType.AddStep;
+        public override RecipeEditCommandType CommandType => RecipeEditCommandType.AddStep;
 
         public int Index => index;
 
