@@ -70,7 +70,7 @@ namespace Cooking.Core.Runtime
                 IngredientInfo ingredientQuantity = recipe.Ingredients[i];
                 IngredientRuntime ingredientRuntime = new IngredientRuntime(ingredientQuantity);
                 ingredients.Add(ingredientRuntime);
-                initialEdits.Add(new RecipeEditAddIngredientCommand(i, ingredientQuantity));
+                initialEdits.Add(new RecipeAddIngredientCommand(i, ingredientQuantity));
             }
 
             for (int i = 0, n = recipe.Steps.Count; i < n; ++i)
@@ -79,7 +79,7 @@ namespace Cooking.Core.Runtime
                 RecipeStepRuntime recipeStepRuntime = new RecipeStepRuntime(recipeStep);
                 recipeStepRuntime.AddOnRecipeStepChangedCallback(OnRecipeStepChanged);
                 steps.Add(recipeStepRuntime);
-                initialEdits.Add(new RecipeEditAddStepCommand(i));
+                initialEdits.Add(new RecipeAddStepCommand(i));
             }
         }
 
@@ -92,7 +92,7 @@ namespace Cooking.Core.Runtime
 
             for (int i = 0, n = recipeDTO.recipeStepDTOs.Count; i < n; ++i)
             {
-                steps[i].Load(recipeDTO.recipeStepDTOs[i]);
+                steps[i].Load(recipeDTO.recipeStepDTOs[i], ingredientCatalogue);
             }
         }
 
@@ -107,13 +107,13 @@ namespace Cooking.Core.Runtime
                     break;
 
                 case RecipeEditCommandType.AddStep:
-                    RecipeEditAddStepCommand addStep = CommandFactory.Create<RecipeEditAddStepCommand>(editCommandDTO.data);
+                    RecipeAddStepCommand addStep = CommandFactory.Create<RecipeAddStepCommand>(editCommandDTO.data);
                     InsertStepImpl(addStep.Index);
                     customEdits.Add(addStep);
                     break;
 
                 case RecipeEditCommandType.AddIngredient:
-                    RecipeEditAddIngredientCommand addIngredient = CommandFactory.Create<RecipeEditAddIngredientCommand>(editCommandDTO.data);
+                    RecipeAddIngredientCommand addIngredient = CommandFactory.Create<RecipeAddIngredientCommand>(editCommandDTO.data);
                     Ingredient ingredient = ingredientCatalogue.FindByGuid(addIngredient.Guid);
                     UnityEngine.Debug.Assert(ingredient != null, $"Failed to find ingredient with Guid {addIngredient.Guid}");
 
@@ -149,7 +149,7 @@ namespace Cooking.Core.Runtime
         public RecipeStepRuntime InsertStep(int index)
         {
             RecipeStepRuntime recipeStepRuntime = InsertStepImpl(index);
-            customEdits.Add(new RecipeEditAddStepCommand(index));
+            customEdits.Add(new RecipeAddStepCommand(index));
             onRecipeChangedEvent?.Invoke();
 
             return recipeStepRuntime;
@@ -172,7 +172,7 @@ namespace Cooking.Core.Runtime
         }
 
         private IngredientRuntime InsertIngredientImpl(
-            RecipeEditAddIngredientCommand insertIngredientCommand, 
+            RecipeAddIngredientCommand insertIngredientCommand, 
             Ingredient ingredient)
         {
             int index = insertIngredientCommand.Index;

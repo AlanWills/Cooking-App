@@ -8,7 +8,7 @@ namespace Cooking.Core.Commands
     {
         #region Properties and Fields
 
-        public override RecipeStepEditCommandType Type => RecipeStepEditCommandType.EditDescription;
+        public override RecipeStepEditCommandType CommandType => RecipeStepEditCommandType.EditDescription;
 
         public string Description => description;
 

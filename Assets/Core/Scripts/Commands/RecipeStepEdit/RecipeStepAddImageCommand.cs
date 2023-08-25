@@ -8,10 +8,12 @@ namespace Cooking.Core.Commands
     {
         #region Properties and Fields
 
-        public override RecipeStepEditCommandType Type => RecipeStepEditCommandType.AddImage;
+        public override RecipeStepEditCommandType CommandType => RecipeStepEditCommandType.AddImage;
 
+        public int Index => index;
         public string ImageId => imageId;
 
+        [SerializeField] private int index;
         [SerializeField] private string imageId;
 
         #endregion
@@ -20,8 +22,9 @@ namespace Cooking.Core.Commands
         {
         }
 
-        public RecipeStepAddImageCommand(string imageId)
+        public RecipeStepAddImageCommand(int index, string imageId)
         {
+            this.index = index;
             this.imageId = imageId;
         }
     }

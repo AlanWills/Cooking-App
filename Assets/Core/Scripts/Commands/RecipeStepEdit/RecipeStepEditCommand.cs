@@ -1,6 +1,4 @@
-﻿using Cooking.Core.Runtime;
-using System;
-using UnityEngine;
+﻿using System;
 
 namespace Cooking.Core.Commands
 {
@@ -9,7 +7,7 @@ namespace Cooking.Core.Commands
     {
         #region Properties and Fields
 
-        public abstract RecipeStepEditCommandType Type { get; }
+        public abstract RecipeStepEditCommandType CommandType { get; }
 
         #endregion
     }

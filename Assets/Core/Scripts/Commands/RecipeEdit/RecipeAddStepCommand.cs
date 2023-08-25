@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Cooking.Core.Commands
 {
     [Serializable]
-    public class RecipeEditAddStepCommand : RecipeEditCommand
+    public class RecipeAddStepCommand : RecipeEditCommand
     {
         #region Properties and Fields
 
@@ -16,9 +16,9 @@ namespace Cooking.Core.Commands
 
         #endregion
 
-        public RecipeEditAddStepCommand() { }
+        public RecipeAddStepCommand() { }
 
-        public RecipeEditAddStepCommand(int index)
+        public RecipeAddStepCommand(int index)
         {
             this.index = index;
         }

@@ -11,5 +11,11 @@ namespace Cooking.Core.Catalogue
         {
             return FindItem(x => string.CompareOrdinal(guid, x.Guid) == 0);
         }
+
+        public bool TryFindByGuid(string guid, out Ingredient ingredient)
+        {
+            ingredient = FindItem(x => string.CompareOrdinal(guid, x.Guid) == 0);
+            return ingredient != null;
+        }
     }
 }

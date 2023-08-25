@@ -8,6 +8,7 @@
         EditWarning,
         EditRecommendation,
         EditExplanation,
-        AddImage
+        AddImage,
+        AddIngredient
     }
 }

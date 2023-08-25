@@ -12,7 +12,7 @@ namespace Cooking.Core.Persistence
 
         public RecipeStepEditCommandDTO(RecipeStepEditCommand command)
         {
-            type = (int)command.Type;
+            type = (int)command.CommandType;
             data = JsonUtility.ToJson(command);
         }
     }

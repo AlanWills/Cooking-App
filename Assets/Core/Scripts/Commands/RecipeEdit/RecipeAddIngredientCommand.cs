@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cooking.Core.Commands
 {
     [Serializable]
-    public class RecipeEditAddIngredientCommand : RecipeEditCommand
+    public class RecipeAddIngredientCommand : RecipeEditCommand
     {
         #region Properties and Fields
 
@@ -28,9 +28,9 @@ namespace Cooking.Core.Commands
 
         #endregion
 
-        public RecipeEditAddIngredientCommand() { }
+        public RecipeAddIngredientCommand() { }
 
-        public RecipeEditAddIngredientCommand(int index, IngredientInfo quantity)
+        public RecipeAddIngredientCommand(int index, IngredientInfo quantity)
             : this(
                   index, 
                   quantity.Ingredient.Guid, 
@@ -41,7 +41,7 @@ namespace Cooking.Core.Commands
         {
         }
 
-        public RecipeEditAddIngredientCommand(
+        public RecipeAddIngredientCommand(
             int index, 
             string guid, 
             MeasurementUnit unit,

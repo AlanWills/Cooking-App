@@ -1,0 +1,343 @@
+<linker>
+  <assembly fullname="Celeste.Application, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Application.ApplicationInfo" preserve="all" />
+    <type fullname="Celeste.Application.ConsoleApplication" preserve="all" />
+    <type fullname="Celeste.Application.Debug.ApplicationDebugMenu" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Assets, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Assets.AssetLoader" preserve="all" />
+    <type fullname="Celeste.Assets.Debug.AssetsDebugMenu" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Bootstrap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Bootstrap.BootstrapManager" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Core.ScheduledCallbackManager" preserve="all" />
+    <type fullname="Celeste.Core.ScheduledCallbacks" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Coroutines, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Coroutines.CoroutineManager" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Debug, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Debug.Commands.DebugCommands" preserve="all" />
+    <type fullname="Celeste.Debug.Commands.DebugCommandsUI" preserve="all" />
+    <type fullname="Celeste.Debug.DebugOnlyMonoBehaviour" preserve="all" />
+    <type fullname="Celeste.Debug.Events.DebugMenuEvent" preserve="all" />
+    <type fullname="Celeste.Debug.Events.DebugMenuEventListener" preserve="all" />
+    <type fullname="Celeste.Debug.Info.FPS" preserve="all" />
+    <type fullname="Celeste.Debug.MemoryInfo" preserve="all" />
+    <type fullname="Celeste.Debug.Menus.DebugMenusUI" preserve="all" />
+    <type fullname="Celeste.Debug.Menus.RegisterDebugMenu" preserve="all" />
+    <type fullname="Celeste.Debug.Events.DebugMenuUnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Events, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Events.AudioClipEvent" preserve="all" />
+    <type fullname="Celeste.Events.BoolValueChangedEvent" preserve="all" />
+    <type fullname="Celeste.Events.Event" preserve="all" />
+    <type fullname="Celeste.Events.EventListener" preserve="all" />
+    <type fullname="Celeste.Events.EventRaiser" preserve="all" />
+    <type fullname="Celeste.Events.FloatEvent" preserve="all" />
+    <type fullname="Celeste.Events.FloatEventListener" preserve="all" />
+    <type fullname="Celeste.Events.GameObjectClickEvent" preserve="all" />
+    <type fullname="Celeste.Events.GameObjectEvent" preserve="all" />
+    <type fullname="Celeste.Events.IntEvent" preserve="all" />
+    <type fullname="Celeste.Events.IntEventListener" preserve="all" />
+    <type fullname="Celeste.Events.IntValueChangedEvent" preserve="all" />
+    <type fullname="Celeste.Events.IntValueChangedEventListener" preserve="all" />
+    <type fullname="Celeste.Events.MultiTouchEvent" preserve="all" />
+    <type fullname="Celeste.Events.MultiTouchEventListener" preserve="all" />
+    <type fullname="Celeste.Events.StringEvent" preserve="all" />
+    <type fullname="Celeste.Events.StringEventListener" preserve="all" />
+    <type fullname="Celeste.Events.TouchEvent" preserve="all" />
+    <type fullname="Celeste.Events.Vector2Event" preserve="all" />
+    <type fullname="Celeste.Events.StringUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Events.FloatUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Events.IntUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Events.MultiTouchUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Events.IntValueChangedUnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Features, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Features.Debug.FeatureDebugMenu" preserve="all" />
+    <type fullname="Celeste.Features.FeatureRecord" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.FSM, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.FSM.FSMGraph" preserve="all" />
+    <type fullname="Celeste.FSM.FSMRuntime" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.FSM.Nodes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.FSM.Nodes.Events.Conditions.VoidEventCondition" preserve="all" />
+    <type fullname="Celeste.FSM.Nodes.Events.MultiEventListenerNode" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Input, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Input.InputManager" preserve="all" />
+    <type fullname="Celeste.Input.InputState" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Loading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Loading.DownloadAddressablesLoadJob" preserve="all" />
+    <type fullname="Celeste.Loading.Events.LoadJobEvent" preserve="all" />
+    <type fullname="Celeste.Loading.Events.LoadJobEventListener" preserve="all" />
+    <type fullname="Celeste.Loading.Events.LoadJobEventRaiser" preserve="all" />
+    <type fullname="Celeste.Loading.LoadSceneSetLoadJob" preserve="all" />
+    <type fullname="Celeste.Loading.MultiLoadJob" preserve="all" />
+    <type fullname="Celeste.Loading.Parameters.LoadJobReference" preserve="all" />
+    <type fullname="DnD.Core.Loading.LoadingManager" preserve="all" />
+    <type fullname="Celeste.Loading.Events.LoadJobUnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Loading.Nodes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Loading.Nodes.ExecuteLoadJobNode" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Log, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Log.ConsoleHudLog" preserve="all" />
+    <type fullname="Celeste.Log.DataStructures.HudLogMessageList" preserve="all" />
+    <type fullname="Celeste.Log.HudLog" preserve="all" />
+    <type fullname="Celeste.Log.HudLogDebugMenu" preserve="all" />
+    <type fullname="Celeste.Log.HudMessage" preserve="all" />
+    <type fullname="Celeste.Log.HudLogLevel" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Memory, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Memory.GameObjectAllocator" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Objects, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Objects.DisableOnAwake" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Parameters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Parameters.BoolValue" preserve="all" />
+    <type fullname="Celeste.Parameters.CameraValue" preserve="all" />
+    <type fullname="Celeste.Parameters.FloatReference" preserve="all" />
+    <type fullname="Celeste.Parameters.IntValue" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Persistence, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Persistence.Snapshots.SnapshotRecord" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Scene, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Scene.Debug.SceneSetDebugMenu" preserve="all" />
+    <type fullname="Celeste.Scene.Events.LoadContextEvent" preserve="all" />
+    <type fullname="Celeste.Scene.Events.LoadContextEventListener" preserve="all" />
+    <type fullname="Celeste.Scene.Events.OnContextLoadedEvent" preserve="all" />
+    <type fullname="Celeste.Scene.Events.OnContextLoadedEventListener" preserve="all" />
+    <type fullname="Celeste.Scene.SceneSet" preserve="all" />
+    <type fullname="Celeste.Scene.SceneSetEntry" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Scene.SceneType" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Scene.Events.LoadContextUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Scene.Events.OnContextLoadedUnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Sound, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Sound.MusicManager" preserve="all" />
+    <type fullname="Celeste.Sound.Settings.MusicSettingsUsingAddressables" preserve="all" />
+    <type fullname="Celeste.Sound.Settings.SFXSettingsUsingAddressables" preserve="all" />
+    <type fullname="Celeste.Sound.SFXManager" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Twine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Events.TwineNodeEvent" preserve="all" />
+    <type fullname="Celeste.Events.TwineStoryEvent" preserve="all" />
+    <type fullname="Celeste.Narrative.Events.TwineNodeEventListener" preserve="all" />
+    <type fullname="Celeste.Narrative.Events.TwineStoryEventListener" preserve="all" />
+    <type fullname="Celeste.Twine.Debug.TwinePersistenceDebugMenu" preserve="all" />
+    <type fullname="Celeste.Twine.Loading.OnTwineContextLoaded" preserve="all" />
+    <type fullname="Celeste.Twine.TwineManager" preserve="all" />
+    <type fullname="Celeste.Twine.TwineRecord" preserve="all" />
+    <type fullname="Celeste.Twine.TwineStoryManager" preserve="all" />
+    <type fullname="Celeste.Twine.UI.EditTwineNodePopupController" preserve="all" />
+    <type fullname="Celeste.Twine.UI.FollowLinkUI" preserve="all" />
+    <type fullname="Celeste.Twine.UI.FollowLinkUIManager" preserve="all" />
+    <type fullname="Celeste.Twine.UI.FollowLinkUISettings" preserve="all" />
+    <type fullname="Celeste.Twine.UI.TwineNodeUIController" preserve="all" />
+    <type fullname="Celeste.Twine.UI.TwineNodeUIControllerSettings" preserve="all" />
+    <type fullname="Celeste.Twine.UI.TwineStoryUIController" preserve="all" />
+    <type fullname="Celeste.Events.TwineStoryUnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="Celeste.Events.TwineNodeUnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.UI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Events.ShowPopupEvent" preserve="all" />
+    <type fullname="Celeste.Events.ShowPopupEventRaiser" preserve="all" />
+    <type fullname="Celeste.UI.CanvasLayer" preserve="all" />
+    <type fullname="Celeste.UI.Input.DraggableUI" preserve="all" />
+    <type fullname="Celeste.UI.Layout.AdjustRectUsingReferenceLayout" preserve="all" />
+    <type fullname="Celeste.UI.Layout.ReferenceLayout" preserve="all" />
+    <type fullname="Celeste.UI.Layout.SetReferenceLayoutRect" preserve="all" />
+    <type fullname="Celeste.UI.Popups.Popup" preserve="all" />
+    <type fullname="Celeste.UI.Popups.PopupManager" preserve="all" />
+    <type fullname="Celeste.UI.Popups.PopupRecord" preserve="all" />
+    <type fullname="Celeste.UI.SetCanvasLayer" preserve="all" />
+    <type fullname="Celeste.UI.Skin.UISkinText" preserve="all" />
+    <type fullname="Crystal.SafeArea" preserve="all" />
+    <type fullname="Crystal.SafeArea/SimDevice" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Viewport, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Celeste.Viewport.SetCameraValue" preserve="all" />
+    <type fullname="Celeste.Viewport.ZoomCamera" preserve="all" />
+  </assembly>
+  <assembly fullname="Cooking.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Cooking.Core.Catalogue.ImageCatalogue" preserve="all" />
+    <type fullname="Cooking.Core.Catalogue.IngredientCatalogue" preserve="all" />
+    <type fullname="Cooking.Core.Catalogue.RecipeCatalogue" preserve="all" />
+    <type fullname="Cooking.Core.Events.RecipeRuntimeEvent" preserve="all" />
+    <type fullname="Cooking.Core.Managers.ImageManager" preserve="all" />
+    <type fullname="Cooking.Core.Managers.RecipeManager" preserve="all" />
+    <type fullname="Cooking.Core.Objects.Ingredient" preserve="all" />
+    <type fullname="Cooking.Core.Objects.Recipe" preserve="all" />
+    <type fullname="Cooking.Core.Parameters.RecipeRuntimeReference" preserve="all" />
+    <type fullname="Cooking.Core.Parameters.RecipeRuntimeValue" preserve="all" />
+    <type fullname="Cooking.Core.Record.ImageRecord" preserve="all" />
+    <type fullname="Cooking.Core.Record.RecipeRecord" preserve="all" />
+    <type fullname="Cooking.Core.UI.CreateRecipePopupController" preserve="all" />
+    <type fullname="Cooking.Core.UI.ImageCarouselCell" preserve="all" />
+    <type fullname="Cooking.Core.UI.ImageCarouselView" preserve="all" />
+    <type fullname="Cooking.Core.UI.RecipesUIController" preserve="all" />
+    <type fullname="Cooking.Core.UI.RecipeUI" preserve="all" />
+    <type fullname="Cooking.Core.UI.WebCamCaptureFullScreenPopupController" preserve="all" />
+    <type fullname="Cooking.Core.Events.GuaranteedRecipeRuntimeEvent" preserve="nothing" serialized="true" />
+    <type fullname="Cooking.Core.Objects.IngredientInfo" preserve="nothing" serialized="true" />
+    <type fullname="Cooking.Core.Objects.RecipeStep" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Cooking.Core.Nodes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Cooking.Core.Nodes.RecipeRuntimeEventCondition" preserve="all" />
+    <type fullname="Cooking.Core.Nodes.SetRecipeRuntimeValueNode" preserve="all" />
+  </assembly>
+  <assembly fullname="Cooking.Instructions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Cooking.Instructions.Contexts.InstructionsContextProvider" preserve="all" />
+    <type fullname="Cooking.Instructions.Managers.InstructionsManager" preserve="all" />
+    <type fullname="Cooking.Instructions.UI.RecipeStepEditModeUI" preserve="all" />
+    <type fullname="Cooking.Instructions.UI.RecipeStepNonEditModeUI" preserve="all" />
+    <type fullname="Cooking.Instructions.UI.RecipeStepUIController" preserve="all" />
+  </assembly>
+  <assembly fullname="FancyCarouselView, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="FancyCarouselView.Runtime.Scripts.CarouselScroller" preserve="all" />
+    <type fullname="FancyCarouselView.Runtime.Scripts.DotCarouselProgressElement" preserve="all" />
+    <type fullname="FancyCarouselView.Runtime.Scripts.DotCarouselProgressView" preserve="all" />
+  </assembly>
+  <assembly fullname="RecyclableScrollRect, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="PolyAndCode.UI.RecyclableScrollRect" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.InputSystem, Version=1.6.3.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.InputSystem.InputActionAsset" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.InputActionReference" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.PlayerInput" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.InputAction" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.InputActionMap" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.InputBinding" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.PlayerInput/ActionEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.PlayerInput/DeviceLostEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
+    <type fullname="TMPro.TMP_FontAsset" preserve="all" />
+    <type fullname="TMPro.TMP_InputField" preserve="all" />
+    <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_GlyphValueRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AudioListener" preserve="all" />
+    <type fullname="UnityEngine.AudioSource" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Camera" preserve="all" />
+    <type fullname="UnityEngine.Cubemap" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.LightmapSettings" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.RenderSettings" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
+    <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.Vector3]" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.GUISkin" preserve="all" />
+    <type fullname="UnityEngine.GUISettings" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.GUIStyle" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Font" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
+    <type fullname="UnityEngine.UI.AspectRatioFitter" preserve="all" />
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.LayoutElement" preserve="all" />
+    <type fullname="UnityEngine.UI.Mask" preserve="all" />
+    <type fullname="UnityEngine.UI.RawImage" preserve="all" />
+    <type fullname="UnityEngine.UI.RectMask2D" preserve="all" />
+    <type fullname="UnityEngine.UI.Slider" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="Celeste.Events.AssetReferences">
+    <type fullname="Celeste.Events.AssetReferences.AudioClipEventAssetReference" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.OdinSerializer">
+    <type fullname="Celeste.OdinSerializer.SerializationData" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Celeste.Parameters.AssetReferences">
+    <type fullname="Celeste.Parameters.AssetReferences.BoolValueAssetReference" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="FancyScrollView">
+    <type fullname="FancyScrollView.Scroller/Snap" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule">
+    <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.Glyph" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphMetrics" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="XNode">
+    <type fullname="XNode.Node/NodePortDictionary" preserve="nothing" serialized="true" />
+    <type fullname="XNode.NodePort" preserve="nothing" serialized="true" />
+    <type fullname="XNode.NodePort/PortConnection" preserve="nothing" serialized="true" />
+  </assembly>
+</linker>

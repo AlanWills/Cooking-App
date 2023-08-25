@@ -1203,6 +1203,22 @@ MonoBehaviour:
     m_Address: Assets/Core/Events/SaveRecipeRecord.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 65037afb0016e974e81464d54e5959e7
+    m_Address: Assets/Ingredients/Data/IngredientCatalogue.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a9b2510fb2147b94fa4ae917fb0a9484
+    m_Address: Assets/Ingredients/Data/Chutney.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c56ccea147f46d4e89fcf1a9a00c3d4
+    m_Address: Assets/Ingredients/Data/SausagesOrSausageMeat.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84e095b763c9bbb4eac73a7bd47b7a6d
+    m_Address: Assets/Ingredients/Data/PuffPastry.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f415dcd695b0f840b154894a2fd239e, type: 2}
   m_SchemaSet:

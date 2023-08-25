@@ -1,4 +1,5 @@
-﻿using Cooking.Core.Commands;
+﻿using Cooking.Core.Catalogue;
+using Cooking.Core.Commands;
 using Cooking.Core.Objects;
 using Cooking.Core.Persistence;
 using System;
@@ -103,6 +104,7 @@ namespace Cooking.Core.Runtime
         private string recommendation;
         private string explanation;
         private List<ImageRuntime> images = new List<ImageRuntime>();
+        private List<IngredientRuntime> ingredients = new List<IngredientRuntime>();
         private List<RecipeStepEditCommand> initialEdits = new List<RecipeStepEditCommand>();
         private List<RecipeStepEditCommand> customEdits = new List<RecipeStepEditCommand>();
         private Action onRecipeStepChangedEvent;
@@ -131,22 +133,30 @@ namespace Cooking.Core.Runtime
             explanation = recipeStep.Explanation;
             initialEdits.Add(new RecipeStepEditExplanationCommand(explanation));
 
-            foreach (Sprite image in recipeStep.Images)
+            for (int i = 0, n = recipeStep.Images.Count; i < n; ++i)
             {
+                Sprite image = recipeStep.Images[i];
                 images.Add(new ImageRuntime(image));
-                initialEdits.Add(new RecipeStepAddImageCommand(image.name));
+                initialEdits.Add(new RecipeStepAddImageCommand(i, image.name));
+            }
+
+            for (int i = 0, n = recipeStep.Ingredients.Count; i < n; ++i)
+            {
+                IngredientInfo ingredientInfo = recipeStep.Ingredients[i];
+                ingredients.Add(new IngredientRuntime(ingredientInfo));
+                initialEdits.Add(new RecipeStepAddIngredientCommand(i, ingredientInfo));
             }
         }
 
-        public void Load(RecipeStepDTO recipeStepDTO)
+        public void Load(RecipeStepDTO recipeStepDTO, IngredientCatalogue ingredientCatalogue)
         {
             foreach (RecipeStepEditCommandDTO editCommandDTO in recipeStepDTO.edits)
             {
-                LoadEdit(editCommandDTO);
+                LoadEdit(editCommandDTO, ingredientCatalogue);
             }
         }
 
-        private void LoadEdit(RecipeStepEditCommandDTO editCommandDTO)
+        private void LoadEdit(RecipeStepEditCommandDTO editCommandDTO, IngredientCatalogue ingredientCatalogue)
         {
             switch ((RecipeStepEditCommandType)editCommandDTO.type)
             {
@@ -201,8 +211,24 @@ namespace Cooking.Core.Runtime
                 case RecipeStepEditCommandType.AddImage:
                     {
                         RecipeStepAddImageCommand addImage = CommandFactory.Create<RecipeStepAddImageCommand>(editCommandDTO.data);
-                        images.Add(new ImageRuntime(addImage.ImageId));
+                        images.Insert(addImage.Index, new ImageRuntime(addImage.ImageId));
                         customEdits.Add(addImage);
+                    }
+                    break;
+
+                case RecipeStepEditCommandType.AddIngredient:
+                    {
+                        RecipeStepAddIngredientCommand addIngredient = CommandFactory.Create<RecipeStepAddIngredientCommand>(editCommandDTO.data);
+
+                        if (ingredientCatalogue.TryFindByGuid(addIngredient.Guid, out var ingredient))
+                        {
+                            ingredients.Insert(addIngredient.Index, new IngredientRuntime(ingredient, addIngredient.Unit, addIngredient.Type, addIngredient.Quantity, addIngredient.Optional));
+                            customEdits.Add(addIngredient);
+                        }
+                        else
+                        {
+                            UnityEngine.Debug.LogAssertion($"Could not find ingredient in catalogue with guid {addIngredient.Guid}.");
+                        }
                     }
                     break;
 
@@ -221,7 +247,7 @@ namespace Cooking.Core.Runtime
         public void AddImage(Sprite image)
         {
             images.Add(new ImageRuntime(image));
-            AddCustomEdit(new RecipeStepAddImageCommand(image.name));
+            AddCustomEdit(new RecipeStepAddImageCommand(images.Count - 1, image.name));
         }
 
         #region Callbacks

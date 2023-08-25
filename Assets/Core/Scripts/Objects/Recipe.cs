@@ -1,25 +1,9 @@
 using Celeste.Objects;
-using Cooking.Core.Enums;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Cooking.Core.Objects
 {
-    #region Ingredient Quantity
-
-    [Serializable]
-    public struct IngredientInfo
-    {
-        public Ingredient Ingredient;
-        public MeasurementUnit Unit;
-        public MeasurementType Type;
-        public float Quantity;
-        public bool Optional;
-    }
-
-    #endregion
-
     [CreateAssetMenu(fileName = nameof(Recipe), menuName = "Cooking/Core/Recipe")]
     public class Recipe : ScriptableObject, IGuid
     {

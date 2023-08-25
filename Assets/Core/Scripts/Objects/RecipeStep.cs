@@ -17,6 +17,7 @@ namespace Cooking.Core.Objects
         public string Explanation => explanation;
         public bool HasImages => images.Count > 0;
         public IReadOnlyList<Sprite> Images => images;
+        public IReadOnlyList<IngredientInfo> Ingredients => ingredients;
 
         [SerializeField] private string title;
         [SerializeField, TextArea(3, 10)] private string description;
@@ -25,6 +26,7 @@ namespace Cooking.Core.Objects
         [SerializeField, TextArea(1, 10)] private string recommendation;
         [SerializeField, TextArea(1, 10)] private string explanation;
         [SerializeField] private List<Sprite> images = new List<Sprite>();
+        [SerializeField] private List<IngredientInfo> ingredients = new List<IngredientInfo>();
 
         #endregion
 

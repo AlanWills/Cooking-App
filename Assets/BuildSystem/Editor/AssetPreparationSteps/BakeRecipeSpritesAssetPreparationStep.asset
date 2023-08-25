@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9579f6deba210aa42ba49cc4d21d80bb, type: 3}
-  m_Name: BakeRecipeSprites
+  m_Name: BakeRecipeSpritesAssetPreparationStep
   m_EditorClassIdentifier: 
-  recipeCatalogue: {fileID: 0}
-  imageRecord: {fileID: 0}
+  recipeCatalogue: {fileID: 11400000, guid: b8a0cc75949c38843849273e680425a3, type: 2}
+  imageCatalogue: {fileID: 11400000, guid: ae0320f28072a72478fc9b14cd9837ad, type: 2}
